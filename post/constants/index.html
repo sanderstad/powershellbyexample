@@ -1,0 +1,46 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Constants | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Constants</a></span></h1>
+</div>
+<main>
+<p>PowerShell supports constants and read-only variables.<br>
+Constants are variables that cannot be changed whatever you try.</p>
+<p>You create a constant variable with the <code>New-Variable</code> command with the parameter <code>-Option Constant</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>New-Variable -Name myConst -Value <span style=color:#e6db74>&#34;This CANNOT be changed&#34;</span> -Option Constant
+$myConst
+</code></pre></div><p>We can&rsquo;t change te value even with the <code>-Force</code> parameter</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>New-Variable -Name myConst -Value <span style=color:#e6db74>&#34;I&#39;m going to change it&#34;</span> -Option Constant -Force
+</code></pre></div><div class=error>
+<pre tabindex=0><code>New-Variable : Cannot overwrite variable myConst because it is read-only or constant.
+At line:1 char:1
++ New-Variable -Name myConst -Value &quot;I'm going to change it&quot; -Option Co ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (myConst:String) [New-Variable], SessionStateUnauthorizedAccessException
+    + FullyQualifiedErrorId : VariableNotWritable,Microsoft.PowerShell.Commands.NewVariableCommand
+</code></pre>
+</div>
+</main>
+<a class=previous href=/post/for/>Next: For
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Read-Only Variables | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Read-Only Variables</a></span></h1>
+</div>
+<main>
+<p>PowerShell supports constants and read-only variables.<br>
+Read-only variables are variables that cannot be changed, in a regular way.</p>
+<p>You create a read-only variable with the <code>New-Variable</code> command with the parameter <code>-Option ReadOnly</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>New-Variable -Name myVar -Value 1337 -Option ReadOnly
+$myVar
+</code></pre></div><p>Let&rsquo;s try and change it</p>
+<pre tabindex=0><code>$myVar = 31337
+</code></pre><div class=error>
+<pre tabindex=0><code>Cannot overwrite variable myVar because it is read-only or constant.
+At line:1 char:1
++ $myVar = 31337
++ ~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (myVar:String) [], SessionStateUnauthorizedAccessException
+    + FullyQualifiedErrorId : VariableNotWritable
+</code></pre>
+</div>
+<p>To change the variable we need to use the <code>-Force</code> parameter:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$myvar          <span style=color:#75715e># Should output 1337</span>
+New-Variable -Name myVar -Value 31337 -Option ReadOnly -Force
+$myVar          <span style=color:#75715e># Should output 31337</span>
+</code></pre></div><p>In this case the value can be changed</p>
+</main>
+<a class=previous href=/post/constants/>Next: Constants
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>

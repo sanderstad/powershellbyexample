@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>foreach | My New Hugo Site</title>
+<title>Foreach Loops | PowerShell By Example</title>
 <link rel=stylesheet href=/css/style.css>
 <link rel=stylesheet href=/css/fonts.css>
 </head>
@@ -13,22 +13,29 @@
 <hr>
 </nav>
 <div class=article-meta>
-<h1><span class=title>My New Hugo Site: foreach</span></h1>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Foreach Loops</a></span></h1>
 </div>
 <main>
-<p>Something</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$files = Get-ChildItem
-<span style=color:#66d9ef>foreach</span> ($file <span style=color:#66d9ef>in</span> $files) {
-  Write-Output $file.Name
+<p>Foreach is a loop that iterates over a collection.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
+
+<span style=color:#66d9ef>foreach</span>($item <span style=color:#66d9ef>in</span> $list){
+    Write-Host $item
 }
-</code></pre></div>
+</code></pre></div><p>The equivalent of the above is:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
+
+$list | ForEach-Object { Write-Host $_ }
+}
+</code></pre></div><p>The <code>ForEach-Object</code> command has more options than the basic <code>foreach</code> loop.</p>
 </main>
+<a class=previous href=/post/function/>Next: function
 <footer>
 <p>
-<a href=/>Home</a>
+<a href=https://powershellbyexample.dev/>Home</a>
 </p>
 <p>
-by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>source</a> | <a href=https://github.com/sanderstad/powershellbyexample/LICENSE.md>license</a>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
 </p>
 </footer>
 </body>

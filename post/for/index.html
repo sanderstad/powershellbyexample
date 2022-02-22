@@ -1,0 +1,39 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>For | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: For</a></span></h1>
+</div>
+<main>
+<p>Classic for loop</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = 1; $i <span style=color:#f92672>-le</span> 5; $i++){
+    Write-Host $i
+}
+</code></pre></div><p>We can also use text in our for loop conditions</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = <span style=color:#e6db74>&#39;&#39;</span> ; $i.length <span style=color:#f92672>-le</span> 20; $i += <span style=color:#e6db74>&#39;=&#39;</span>){
+    Write-Host $i
+}
+</code></pre></div>
+</main>
+<a class=previous href=/post/foreach/>Next: Foreach Loops
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>

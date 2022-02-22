@@ -1,0 +1,53 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Variables | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Variables</a></span></h1>
+</div>
+<main>
+<p>In PowerShell we can store all types of values in PowerShell variables. It&rsquo;s possible to store the results of commands, and store elements that are used in commands and expressions, such as names, paths, settings, and values.</p>
+<p>Variable unlike other languages are note case-sensitive, and can include spaces and special characters. Variable names with special characters and spaces are difficult to use and should be avoided. For more information, see <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2#variable-names-that-include-special-characters">Variable names that include special characters</a>.</p>
+<p>PowerShell automatically detects the type of the variable and converts it to the appropriate type. It is also possible to declare variables with a specific type.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$v = 1337                               <span style=color:#75715e># System.Int32</span>
+$v = <span style=color:#e6db74>&#34;Swifty&#34;</span>                           <span style=color:#75715e># System.String</span>
+$v = 31337, <span style=color:#e6db74>&#34;Swifty&#34;</span>                    <span style=color:#75715e># array of System.Int32, System.String</span>
+$v = Get-ChildItem C:\Windows           <span style=color:#75715e># FileInfo and DirectoryInfo types</span>
+New-Variable -Name v -Value 1337        <span style=color:#75715e># System.Int32</span>
+</code></pre></div><p>PowerShell is even smart enough to detect when a variable is assigned a value that is not of the same type and convert it to the appropriate type.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = <span style=color:#e6db74>&#34;1337&#34;</span>   <span style=color:#75715e># The string is converted to an integer.</span>
+$number.GetType()   <span style=color:#75715e># Get the type of the variable.</span>
+</code></pre></div><p>As soon as the variable is assigned a value, it is considered to be of that data type. This means that it cannot be changed without converting it to a different type.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = <span style=color:#e6db74>&#34;1337&#34;</span> 
+$number = <span style=color:#e6db74>&#34;One Thousand, Three Hundred and Thirty-Seven&#34;</span>  <span style=color:#75715e>#This will give an error</span>
+</code></pre></div><div class=error>
+<pre tabindex=0><code>Cannot convert value &quot;One Thousand, Three Hundred and Thirty-Seven&quot; to type &quot;System.Int32&quot;. Error: &quot;Input string was not in a correct format.&quot;
+At line:1 char:1
++ $number = &quot;One Thousand, Three Hundred and Thirty-Seven&quot;  #This will  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+</code></pre>
+</div>
+</main>
+<a class=previous href=/post/read-only-variables/>Next: Read-Only Variables
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>
