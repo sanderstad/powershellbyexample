@@ -1,16 +1,30 @@
 ---
-title: foreach
+title: Foreach Loops
 date: '2022-02-22'
 categories:
   - Example
+weight: 60
 ---
 
-Something
+Foreach is a loop that iterates over a collection.
+
+
 
 ```powershell
-$files = Get-ChildItem
-foreach ($file in $files) {
-  Write-Output $file.Name
+$list = @('a', 'b', 'c', 'd');
+
+foreach($item in $list){
+    Write-Host $item
 }
 ```
 
+The equivalent of the above is:
+
+```powershell
+$list = @('a', 'b', 'c', 'd');
+
+$list | ForEach-Object { Write-Host $_ }
+}
+```
+
+The `ForEach-Object` command has more options than the basic `foreach` loop.

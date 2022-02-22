@@ -17,6 +17,7 @@ $v = 1337                               # System.Int32
 $v = "Swifty"                           # System.String
 $v = 31337, "Swifty"                    # array of System.Int32, System.String
 $v = Get-ChildItem C:\Windows           # FileInfo and DirectoryInfo types
+New-Variable -Name v -Value 1337        # System.Int32
 ```
 
 PowerShell is even smart enough to detect when a variable is assigned a value that is not of the same type and convert it to the appropriate type.
@@ -26,3 +27,20 @@ $number = "1337"   # The string is converted to an integer.
 $number.GetType()   # Get the type of the variable.
 ```
 
+As soon as the variable is assigned a value, it is considered to be of that data type. This means that it cannot be changed without converting it to a different type.
+
+```powershell
+$number = "1337" 
+$number = "One Thousand, Three Hundred and Thirty-Seven"  #This will give an error
+```
+
+{{< error >}}
+```
+Cannot convert value "One Thousand, Three Hundred and Thirty-Seven" to type "System.Int32". Error: "Input string was not in a correct format."
+At line:1 char:1
++ $number = "One Thousand, Three Hundred and Thirty-Seven"  #This will  ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : MetadataError: (:) [], ArgumentTransformationMetadataException
+    + FullyQualifiedErrorId : RuntimeException
+```
+{{< /error >}}
