@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>MathJax | My New Hugo Site</title>
+<title>Hello World | My New Hugo Site</title>
 <link rel=stylesheet href=/css/style.css>
 <link rel=stylesheet href=/css/fonts.css>
 </head>
@@ -12,12 +12,15 @@
 </ul>
 <hr>
 </nav>
-<h1>MathJax</h1>
-<ul>
-<li>
-<a href=/post/2016-02-14-hello-markdown/>A Plain Markdown Post</a>
-</li>
-</ul>
+<div class=article-meta>
+<h1><span class=title>My New Hugo Site: Hello World</span></h1>
+</div>
+<main>
+<pre tabindex=0><code class=language-{powershell, data-lang={powershell,>cd ../..;
+if [ ! -f 'theme.toml' ]; then exit 0; fi  # only run find below within the theme example site
+find . -not -path '*/exampleSite/*' \( -name '*.html' -o -name '*.css' \) | xargs wc -l
+</code></pre>
+</main>
 <footer>
 <p>
 <a href=/>Home</a>

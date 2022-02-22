@@ -2,7 +2,7 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>MathJax | My New Hugo Site</title>
+<title>foreach | My New Hugo Site</title>
 <link rel=stylesheet href=/css/style.css>
 <link rel=stylesheet href=/css/fonts.css>
 </head>
@@ -12,12 +12,17 @@
 </ul>
 <hr>
 </nav>
-<h1>MathJax</h1>
-<ul>
-<li>
-<a href=/post/2016-02-14-hello-markdown/>A Plain Markdown Post</a>
-</li>
-</ul>
+<div class=article-meta>
+<h1><span class=title>My New Hugo Site: foreach</span></h1>
+</div>
+<main>
+<p>Something</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$files = Get-ChildItem
+<span style=color:#66d9ef>foreach</span> ($file <span style=color:#66d9ef>in</span> $files) {
+  Write-Output $file.Name
+}
+</code></pre></div>
+</main>
 <footer>
 <p>
 <a href=/>Home</a>
