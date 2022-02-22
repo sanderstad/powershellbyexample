@@ -8,3 +8,5 @@ title: PowerShell by Example
 
 PowerShell by Example, modeled after [Go Back Example](https://gobyexample.com/), is a hands-on introduction to PowerShell using annotated example programs. Check out the first example or browse the full list below.
 
+To execute the scripts make sure you have at least PowerShell 5 installed.
+

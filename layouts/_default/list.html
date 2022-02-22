@@ -1,15 +1,9 @@
-{{ partial "header.html" . }}
-
-{{if not .IsHome }}
+{{ partial "header.html" . }} {{if not .IsHome }}
 <h1>{{ .Title | markdownify }}</h1>
-{{ end }}
-
-{{ .Content }}
+{{ end }} {{ .Content }}
 
 <ul>
-    {{ $pages := .Pages }}
-    {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-    {{ range (where $pages "Section" "!=" "") }}
+    {{ $pages := .Pages.ByWeight }} {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }} {{ range (where $pages "Section" "!=" "") }}
     <li>
         <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
     </li>
