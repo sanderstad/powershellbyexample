@@ -7,7 +7,6 @@
     {{ .Content }}
 </main>
 
-{{with .Site.RegularPages.Next . }}<a class="previous" href="{{.RelPermalink}}">Next</a>{{end}} 
-
+{{with .Site.RegularPages.Prev . }}<a class="previous" href="{{.RelPermalink}}">Next: {{.Title}}{{end}}
 
 {{ partial "footer.html" . }}
