@@ -1,0 +1,67 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Switch | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Switch</a></span></h1>
+</div>
+<main>
+<p>Switch statements are a way to execute different code based on different conditions.
+This approach can be more efficient than using multiple if/elseif statements</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$month = 3
+
+<span style=color:#66d9ef>if</span> ($month <span style=color:#f92672>-eq</span> 1) { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 2) { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 3) { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 4) { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 5) { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 6) { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 7) { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 8) { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 9) { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 10) { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 11) { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
+<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 12) { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
+<span style=color:#66d9ef>else</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
+
+<span style=color:#75715e># Instead we can write the above as</span>
+<span style=color:#66d9ef>switch</span> ($month) {
+    1 { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
+    2 { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
+    3 { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
+    4 { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
+    5 { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
+    6 { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
+    7 { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
+    8 { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
+    9 { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
+    10 { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
+    11 { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
+    12 { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
+    <span style=color:#66d9ef>default</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
+}
+</code></pre></div><p>To use multiple expressions in a switch statement, you can use the <code>-and</code> and <code>-or</code> operators.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>
+</code></pre></div>
+</main>
+<a class=previous href=/post/function/>Next: function
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>

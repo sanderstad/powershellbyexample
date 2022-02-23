@@ -1,0 +1,57 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>If/Else | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: If/Else</a></span></h1>
+</div>
+<main>
+<p>Using <code>if</code> and <code>else</code> statements in PowerShell is pretty straightforward.</p>
+<p>You can have an <code>if</code> statement without an <code>else</code> statement.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$value = 5
+
+<span style=color:#66d9ef>if</span>($value &gt; 1){
+    Write-Host <span style=color:#e6db74>&#34;value is greater than 1&#34;</span>
+}
+</code></pre></div><p>You can have an <code>if</code> statement with a single <code>else</code> statement, or an <code>if</code> statement with an <code>else if</code> statement.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$value = 5
+
+<span style=color:#66d9ef>if</span> ($value <span style=color:#f92672>-gt</span> 10) {
+    Write-Host <span style=color:#e6db74>&#34;value is greater than 10&#34;</span>
+}
+<span style=color:#66d9ef>else</span> {
+    Write-Host <span style=color:#e6db74>&#34;value is $value&#34;</span>
+}
+
+<span style=color:#66d9ef>if</span> ($value <span style=color:#f92672>-gt</span> 10) {
+    Write-Host <span style=color:#e6db74>&#34;value is greater than 10&#34;</span>
+}
+<span style=color:#66d9ef>elseif</span> ($value <span style=color:#f92672>-lt</span> 10) {
+    Write-Host <span style=color:#e6db74>&#34;value is less than 10&#34;</span>
+}
+<span style=color:#66d9ef>else</span> {
+    Write-Host <span style=color:#e6db74>&#34;value is 10&#34;</span>
+}
+</code></pre></div>
+</main>
+<a class=previous href=/post/switch/>Next: Switch
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>
