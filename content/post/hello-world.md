@@ -56,7 +56,7 @@ wh
 wo                             Hello, World!
 ```
 
-https://www.tutorialspoint.com/difference-between-write-output-and-write-host-command-in-powershell
+As you can see the `Write-Host` outputs the value to the console while the `Write-Output` command stores the output in the variable.
 
 
 
