@@ -45,10 +45,34 @@ switch ($month) {
 }
 ```
 
+You can use wildcards in the condition of the case:
+
+```powershell
+# Using the -Wildcard parameter
+$msg = "Error, the action failed"
+switch -Wildcard ($msg) {
+    "Error*" { "Action error" }
+    "Warning*" { "Action warning" }
+    "Successful*" { "Action succesfull" }
+}
+
+## Or use it in the conditions
+$msg = "Error, the action failed"
+switch ($msg) {
+    { $_ -like "Error*" } { "Action error" }
+    { $_ -like "Warning*" } { "Action warning" }
+    { $_ -like "Successful*" } { "Action succesfull" }
+}
+```
+
 To use multiple expressions in a switch statement, you can use the `-and` and `-or` operators.
 
 ```powershell
-
+switch ((Get-Date).Day) {
+    { $_ -le 10 } { "Day of the month is lower than 10" }
+    { $_ -gt 10 -and $_ -le 25 } { "Day of the month is between 10 and 25" }
+    { $_ -gt 25 } { "Day of the month is greater than 25" }
+}
 ```
 
 
