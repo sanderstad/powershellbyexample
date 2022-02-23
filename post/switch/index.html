@@ -50,7 +50,12 @@ This approach can be more efficient than using multiple if/elseif statements</p>
     12 { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
     <span style=color:#66d9ef>default</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
 }
-</code></pre></div><p>You can use wildcards in the condition of the case:</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>March
+March
+</code></pre><p>The result is the same but the code is much more readable.</p>
+<h2 id=wildcards>Wildcards</h2>
+<p>You can use wildcards in the condition of the case:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#75715e># Using the -Wildcard parameter</span>
 $msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
 <span style=color:#66d9ef>switch</span> <span style=color:#f92672>-Wildcard</span> ($msg) {
@@ -66,13 +71,20 @@ $msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
     { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Warning*&#34;</span> } { <span style=color:#e6db74>&#34;Action warning&#34;</span> }
     { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Successful*&#34;</span> } { <span style=color:#e6db74>&#34;Action succesfull&#34;</span> }
 }
-</code></pre></div><p>To use multiple expressions in a switch statement, you can use the <code>-and</code> and <code>-or</code> operators.</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Action error
+Action error
+</code></pre><p>Both have the same result, but with the last example you are more flexible to the operators you want to use.</p>
+<h2 id=multiple-conditions>Multiple conditions</h2>
+<p>To use multiple expressions in a switch statement, you can use the <code>-and</code> and <code>-or</code> operators.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>switch</span> ((Get-Date).Day) {
     { $_ <span style=color:#f92672>-le</span> 10 } { <span style=color:#e6db74>&#34;Day of the month is lower than 10&#34;</span> }
     { $_ <span style=color:#f92672>-gt</span> 10 <span style=color:#f92672>-and</span> $_ <span style=color:#f92672>-le</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is between 10 and 25&#34;</span> }
     { $_ <span style=color:#f92672>-gt</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is greater than 25&#34;</span> }
 }
-</code></pre></div>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Day of the month is between 10 and 25
+</code></pre>
 </main>
 <a class=previous href=/post/arrays/>Next: Arrays
 <footer>

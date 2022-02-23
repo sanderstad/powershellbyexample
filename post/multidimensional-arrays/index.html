@@ -1,0 +1,70 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Multidimensional Arrays | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Multidimensional Arrays</a></span></h1>
+</div>
+<main>
+<p>There are two types of multidimensional arrays, jagged and true multidimensional arrays.</p>
+<h2 id=jagged-arrays>Jagged arrays</h2>
+<p>Jagged arrays are the arrays you will probably use the most. These types of arrays are very cost effective because the dimensions can be different in size.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$array = @(1, 2, (1, 2, 3), 3, 4, (10, 11, 12), 5)
+$array[0]
+$array[1]
+$array[2]
+$array[2][0]
+$array[2][1]
+$array[5]
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>1
+2
+1
+2
+3
+1
+2
+10
+11
+12
+</code></pre><h2 id=true-multidimensional-arrays>True multidimensional arrays</h2>
+<p>With true multidimensional arrays can be compared to a matrix. You define the size of the array/matrix when you create it.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$array = New-Object <span style=color:#e6db74>&#39;object[,]&#39;</span> 5,8
+$array[2,5] = <span style=color:#e6db74>&#39;Hello&#39;</span>
+$array[3,7] = <span style=color:#e6db74>&#39;World!&#39;</span>
+$array
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Hello
+World!
+</code></pre><p>You can compare the above with the following:</p>
+<pre tabindex=0><code>[ ][ ][ ]    [ ]    [ ]
+[ ][ ][ ]    [ ]    [ ]
+[ ][ ][ ]    [ ]    [ ]
+[ ][ ][ ]    [ ]    [ ]
+[ ][ ][ ]    [ ]    [ ]
+[ ][ ][Hello][ ]    [ ]
+[ ][ ][ ]    [ ]    [ ]
+[ ][ ][ ]    [World][ ]
+</code></pre>
+</main>
+<a class=previous href=/post/functions/>Next: Functions
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a> | <a href=https://github.com/sanderstad/powershellbyexample>Source</a>
+</p>
+</footer>
+</body>
+</html>

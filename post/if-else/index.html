@@ -20,10 +20,12 @@
 <p>You can have an <code>if</code> statement without an <code>else</code> statement.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$value = 5
 
-<span style=color:#66d9ef>if</span>($value &gt; 1){
+<span style=color:#66d9ef>if</span>($value <span style=color:#f92672>-gt</span> 1){
     Write-Host <span style=color:#e6db74>&#34;value is greater than 1&#34;</span>
 }
-</code></pre></div><p>You can have an <code>if</code> statement with a single <code>else</code> statement, or an <code>if</code> statement with an <code>else if</code> statement.</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>value is greater than 1
+</code></pre><p>You can have an <code>if</code> statement with a single <code>else</code> statement, or an <code>if</code> statement with an <code>else if</code> statement.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$value = 5
 
 <span style=color:#66d9ef>if</span> ($value <span style=color:#f92672>-gt</span> 10) {
@@ -42,7 +44,10 @@
 <span style=color:#66d9ef>else</span> {
     Write-Host <span style=color:#e6db74>&#34;value is 10&#34;</span>
 }
-</code></pre></div>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>value is 5
+value is less than 10
+</code></pre>
 </main>
 <a class=previous href=/post/switch/>Next: Switch
 <footer>
