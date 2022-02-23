@@ -8,8 +8,6 @@ weight: 60
 
 Foreach is a loop that iterates over a collection.
 
-
-
 ```powershell
 $list = @('a', 'b', 'c', 'd');
 
@@ -18,13 +16,34 @@ foreach($item in $list){
 }
 ```
 
+Result:
+
+```
+a
+b
+c
+d
+```
+
 The equivalent of the above is:
 
 ```powershell
 $list = @('a', 'b', 'c', 'd');
 
 $list | ForEach-Object { Write-Host $_ }
-}
 ```
 
-The `ForEach-Object` command has more options than the basic `foreach` loop.
+Result:
+
+```
+a
+b
+c
+d
+```
+
+The `ForEach-Object` command has more options than the basic `foreach` loop. For more info about the `ForEach-Object` command run the `Get-Help` command.
+
+```powershell
+Get-Help ForEach-Object
+```
