@@ -20,11 +20,33 @@
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = 1; $i <span style=color:#f92672>-le</span> 5; $i++){
     Write-Host $i
 }
-</code></pre></div><p>We can also use text in our for loop conditions</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>1
+2
+3
+4
+5
+</code></pre><p>We can also use text in our for loop conditions</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = <span style=color:#e6db74>&#39;&#39;</span> ; $i.length <span style=color:#f92672>-le</span> 20; $i += <span style=color:#e6db74>&#39;=&#39;</span>){
     Write-Host $i
 }
-</code></pre></div>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>=
+==
+===
+====
+=====
+======
+=======
+========
+=========
+==========
+===========
+============
+...
+...
+====================
+</code></pre>
 </main>
 <a class=previous href=/post/foreach/>Next: Foreach
 <footer>

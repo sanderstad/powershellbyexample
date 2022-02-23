@@ -13,8 +13,10 @@ Constants are variables that cannot be changed whatever you try.
 You create a constant variable with the New-Variable command with the parameter -Option Constant.
 New-Variable -Name myConst -Value &amp;#34;This CANNOT be changed&amp;#34; -Option Constant $myConst We can&amp;rsquo;t change te value even with the -Force parameter
 New-Variable -Name myConst -Value &amp;#34;I&amp;#39;m going to change it&amp;#34; -Option Constant -Force New-Variable : Cannot overwrite variable myConst because it is read-only or constant.</description></item><item><title>For</title><link>https://powershellbyexample.dev/post/for/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/for/</guid><description>Classic for loop
-for ($i = 1; $i -le 5; $i++){ Write-Host $i } We can also use text in our for loop conditions
-for ($i = &amp;#39;&amp;#39; ; $i.length -le 20; $i += &amp;#39;=&amp;#39;){ Write-Host $i }</description></item><item><title>Foreach</title><link>https://powershellbyexample.dev/post/foreach/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/foreach/</guid><description>Foreach is a loop that iterates over a collection.
+for ($i = 1; $i -le 5; $i++){ Write-Host $i } Result:
+1 2 3 4 5 We can also use text in our for loop conditions
+for ($i = &amp;#39;&amp;#39; ; $i.length -le 20; $i += &amp;#39;=&amp;#39;){ Write-Host $i } Result:
+= == === ==== ===== ====== ======= ======== ========= ========== =========== ============ ... ... ====================</description></item><item><title>Foreach</title><link>https://powershellbyexample.dev/post/foreach/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/foreach/</guid><description>Foreach is a loop that iterates over a collection.
 $list = @(&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;); foreach($item in $list){ Write-Host $item } The equivalent of the above is:
 $list = @(&amp;#39;a&amp;#39;, &amp;#39;b&amp;#39;, &amp;#39;c&amp;#39;, &amp;#39;d&amp;#39;); $list | ForEach-Object { Write-Host $_ } } The ForEach-Object command has more options than the basic foreach loop.</description></item><item><title>If/Else</title><link>https://powershellbyexample.dev/post/if-else/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/if-else/</guid><description>Using if and else statements in PowerShell is pretty straightforward.
 You can have an if statement without an else statement.
