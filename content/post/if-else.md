@@ -14,9 +14,15 @@ You can have an `if` statement without an `else` statement.
 ```powershell
 $value = 5
 
-if($value > 1){
+if($value -gt 1){
     Write-Host "value is greater than 1"
 }
+```
+
+Result:
+
+```
+value is greater than 1
 ```
 
 You can have an `if` statement with a single `else` statement, or an `if` statement with an `else if` statement.
@@ -40,4 +46,11 @@ elseif ($value -lt 10) {
 else {
     Write-Host "value is 10"
 }
+```
+
+Result:
+
+```
+value is 5
+value is less than 10
 ```

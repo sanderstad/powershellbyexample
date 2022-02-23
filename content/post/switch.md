@@ -45,6 +45,17 @@ switch ($month) {
 }
 ```
 
+Result:
+
+```
+March
+March
+```
+
+The result is the same but the code is much more readable.
+
+## Wildcards
+
 You can use wildcards in the condition of the case:
 
 ```powershell
@@ -65,6 +76,17 @@ switch ($msg) {
 }
 ```
 
+Result:
+
+```
+Action error
+Action error
+```
+
+Both have the same result, but with the last example you are more flexible to the operators you want to use.
+
+## Multiple conditions
+
 To use multiple expressions in a switch statement, you can use the `-and` and `-or` operators.
 
 ```powershell
@@ -75,4 +97,9 @@ switch ((Get-Date).Day) {
 }
 ```
 
+Result:
+
+```
+Day of the month is between 10 and 25
+```
 
