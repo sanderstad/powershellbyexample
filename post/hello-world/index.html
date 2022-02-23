@@ -18,7 +18,30 @@
 <main>
 <p>As with every first program we write, we will print the classic &ldquo;hello world&rdquo; message. Here’s the full source code.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Write-Host <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
-</code></pre></div>
+<span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Hello, World!
+Hello, World!
+</code></pre><p>There is another method to print the output or the strings to screen and that is is <code>Write-Output</code>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Write-Output <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
+<span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
+</code></pre></div><p>This will print the exact same thing as the previous snippet.</p>
+<p>Result:</p>
+<pre tabindex=0><code>Hello, World!
+Hello, World!
+</code></pre><p>It all becomes different when the two commands are used to store the output.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$wh = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
+$wo = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
+
+Get-Variable wh
+
+Get-Variable wo
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Name                           Value
+----                           -----
+wh
+wo                             Hello, World!
+</code></pre><p><a href=https://www.tutorialspoint.com/difference-between-write-output-and-write-host-command-in-powershell>https://www.tutorialspoint.com/difference-between-write-output-and-write-host-command-in-powershell</a></p>
 </main>
 <a class=previous href=/post/variables/>Next: Variables
 <footer>
