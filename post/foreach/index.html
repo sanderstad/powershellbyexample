@@ -22,12 +22,23 @@
 <span style=color:#66d9ef>foreach</span>($item <span style=color:#66d9ef>in</span> $list){
     Write-Host $item
 }
-</code></pre></div><p>The equivalent of the above is:</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>a
+b
+c
+d
+</code></pre><p>The equivalent of the above is:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
 
 $list | ForEach-Object { Write-Host $_ }
-}
-</code></pre></div><p>The <code>ForEach-Object</code> command has more options than the basic <code>foreach</code> loop.</p>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>a
+b
+c
+d
+</code></pre><p>The <code>ForEach-Object</code> command has more options than the basic <code>foreach</code> loop. For more info about the <code>ForEach-Object</code> command run the <code>Get-Help</code> command.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Get-Help ForEach-Object
+</code></pre></div>
 </main>
 <a class=previous href=/post/if-else/>Next: If/Else
 <footer>
