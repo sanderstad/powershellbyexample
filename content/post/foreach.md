@@ -1,5 +1,5 @@
 ---
-title: Foreach Loops
+title: Foreach
 date: '2022-02-22'
 categories:
   - Example
