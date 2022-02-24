@@ -107,6 +107,7 @@ These blocks are not required but they are very useful when you want to execute 
 
 ```powershell
 function writeMessage {
+    [CmdLetBinding()]
     param(
         [Parameter(Mandatory = $true, Position = 1, HelpMessage = "The message to write")]
         [string]$Message
