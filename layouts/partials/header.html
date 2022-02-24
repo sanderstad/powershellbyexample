@@ -1,20 +1,40 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Title }} | {{ .Site.Title }}</title>
-    <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
-    {{ partial "head_custom.html" . }}
-  </head>
+    <link rel="stylesheet" href="{{ " /css/style.css " | relURL }}" />
+    <link rel="stylesheet" href="{{ " /css/fonts.css " | relURL }}" /> {{ partial "head_custom.html" . }}
 
-  <body>
+    <meta name="description" content="💙 PowerShell By Example learning PowerShell by example. Contribute to sanderstad/powershellbyexample development by creating an account on GitHub.">
+
+    <meta name="twitter:image:src" content="https://opengraph.githubassets.com/ab970e549b571315f86d4f9eb60baae59d2eab15ed8fafe1b415d9e3bb8faeb4/sanderstad/powershellbyexample" />
+    <meta name="twitter:site" content="@github" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="sanderstad/powershellbyexample: 💙 PowerShell By Example" />
+    <meta name="twitter:description" content="💙 PowerShell By Example learning PowerShell by example. Contribute to sanderstad/powershellbyexample development by creating an account on GitHub." />
+
+    <meta property="og:image" content="https://opengraph.githubassets.com/ab970e549b571315f86d4f9eb60baae59d2eab15ed8fafe1b415d9e3bb8faeb4/sanderstad/powershellbyexample" />
+    <meta property="og:image:alt" content="💙 PowerShell By Example learning PowerShell by example. Contribute to sanderstad/powershellbyexample development by creating an account on GitHub." />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:site_name" content="GitHub" />
+    <meta property="og:type" content="object" />
+    <meta property="og:title" content="sanderstad/powershellbyexample: 💙 PowerShell By Example" />
+    <meta property="og:url" content="https://github.com/sanderstad/powershellbyexample" />
+    <meta property="og:description" content="💙 PowerShell By Example learning PowerShell by example. Contribute to sanderstad/powershellbyexample development by creating an account on GitHub." />
+</head>
+
+
+
+<body>
     <nav>
-    <ul class="menu">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
-    <hr/>
+        <ul class="menu">
+            {{ range .Site.Menus.main }}
+            <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+            {{ end }}
+        </ul>
+        <hr/>
     </nav>
