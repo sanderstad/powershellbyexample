@@ -156,7 +156,7 @@ Address                        456 North Street
 
 There are various ways we can sort a hashtable.
 
-The first thing we can do is create an ordered hashtable. This will result in the keys to be sorted.
+The first thing we can do is create an ordered hashtable.
 
 ```powershell
 $addresses = @()
