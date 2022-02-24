@@ -108,7 +108,7 @@ Line |
     )
 
     <span style=color:#66d9ef>begin</span> {
-        Write-Host <span style=color:#e6db74>&#34;Beginning of script&#34;</span>
+        Write-Verbose <span style=color:#e6db74>&#34;Beginning of script&#34;</span>
         <span style=color:#66d9ef>if</span> (($null <span style=color:#f92672>-eq</span> $Message) <span style=color:#f92672>-or</span> ($Message <span style=color:#f92672>-eq</span> <span style=color:#e6db74>&#34;&#34;</span>)) {
             <span style=color:#66d9ef>throw</span> <span style=color:#e6db74>&#34;Message cannot be empty&#34;</span>;
         }
@@ -123,7 +123,7 @@ Line |
     }
 }
 
-writeMessage <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+writeMessage <span style=color:#e6db74>&#34;Hello World!&#34;</span> -Verbose
 </code></pre></div><p>Result:</p>
 <pre tabindex=0><code>Beginning of script
 Message: Hello World!
