@@ -16,6 +16,105 @@
 <h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Functions</a></span></h1>
 </div>
 <main>
+<p>Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.<br>
+Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.</p>
+<p>To create a function we use the <code>function</code> keyword:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> writeHelloWorld() {
+    Write-Host <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+}
+
+writeHelloWorld
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Hello World!
+</code></pre><p>Obviously this function is not very useful, but it is a good example how easy it is to create a function.</p>
+<h2 id=parameters>Parameters</h2>
+<p>Parameters is where the magic happens. When you create a function you can pass parameters to it.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> writeMessage {
+    <span style=color:#66d9ef>param</span>(
+        <span style=color:#66d9ef>[string]</span>$Message
+    )
+
+    Write-Host <span style=color:#e6db74>&#34;Message: $message&#34;</span>
+}
+
+writeMessage <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+writeMessage -message <span style=color:#e6db74>&#34;Who is there?&#34;</span>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Message: Hello World!
+Message: Who is there?
+</code></pre><p>Notice that we can pass parameters with and without specifying the parameter.</p>
+<h2 id=adding-advanced-functionality>Adding advanced functionality</h2>
+<p>To make a function more advanced we can add <code>[CmdletBinding()]</code> to the function.<br>
+This enabled you to support for:</p>
+<ul>
+<li>Confirming for impact</li>
+<li>Help URI</li>
+<li>Support paging</li>
+<li>Should process</li>
+<li>Positional binding</li>
+</ul>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> writeMessage {
+    <span style=color:#66d9ef>param</span>(
+        [<span style=color:#66d9ef>Parameter</span>(<span style=color:#66d9ef>Mandatory</span> = $true, <span style=color:#66d9ef>Position</span> = 1, <span style=color:#66d9ef>HelpMessage</span> = <span style=color:#e6db74>&#34;The message to write&#34;</span>)]
+        <span style=color:#66d9ef>[string]</span>$Message
+    )
+
+    <span style=color:#66d9ef>process</span> {
+        Write-Host <span style=color:#e6db74>&#34;Message: $message&#34;</span>
+    }
+}
+
+writeMessage <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+writeMessage
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Message: Hello World!
+cmdlet writeMessage at command pipeline position 1
+Supply values for the following parameters:
+Message:
+writeMessage: C:\temp\temp.ps1:14:1
+Line |
+  14 |  writeMessage
+     |  ~~~~~~~~~~~~
+     | Cannot bind argument to parameter 'Message' because it is an empty string.
+</code></pre><p>Notice that the function also includes the <code>process</code> keyword.</p>
+<h2 id=begin-process-and-end>Begin, process and End</h2>
+<p>These blocks are not required but they are very useful when you want to execute code before or after the function.</p>
+<p><em>Begin</em> is used for one-time processing before the rest of the function is executed.
+<em>Process</em> is used for processing the function.
+<em>End</em> is used for one-time processing after the rest of the function is executed.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>function</span> writeMessage {
+    <span style=color:#66d9ef>param</span>(
+        [<span style=color:#66d9ef>Parameter</span>(<span style=color:#66d9ef>Mandatory</span> = $true, <span style=color:#66d9ef>Position</span> = 1, <span style=color:#66d9ef>HelpMessage</span> = <span style=color:#e6db74>&#34;The message to write&#34;</span>)]
+        <span style=color:#66d9ef>[string]</span>$Message
+    )
+
+    <span style=color:#66d9ef>begin</span> {
+        Write-Host <span style=color:#e6db74>&#34;Beginning of script&#34;</span>
+        <span style=color:#66d9ef>if</span> (($null <span style=color:#f92672>-eq</span> $Message) <span style=color:#f92672>-or</span> ($Message <span style=color:#f92672>-eq</span> <span style=color:#e6db74>&#34;&#34;</span>)) {
+            <span style=color:#66d9ef>throw</span> <span style=color:#e6db74>&#34;Message cannot be empty&#34;</span>;
+        }
+    }
+
+    <span style=color:#66d9ef>process</span> {
+        Write-Host <span style=color:#e6db74>&#34;Message: $message&#34;</span>
+    }
+
+    <span style=color:#66d9ef>end</span> {
+        Write-Host <span style=color:#e6db74>&#34;End of script&#34;</span>
+    }
+}
+
+writeMessage <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Beginning of script
+Message: Hello World!
+End of script
+</code></pre><p>For more information about advanced function go to the Microsoft Docs website:</p>
+<ul>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.2">Functions</a></li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced?view=powershell-7.2">Advanced Functions</a></li>
+<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters?view=powershell-7.2">Advanced Parameters</a></li>
+</ul>
 </main>
 <a class=previous href=/about/>Next: About Hugo XMin
 <footer>

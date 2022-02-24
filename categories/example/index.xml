@@ -36,4 +36,8 @@ $array = @(1, 2, (1, 2, 3), 3, 4, (10, 11, 12), 5) $array[0] $array[1] $array[2]
 1 2 1 2 3 1 2 10 11 12 True multidimensional arrays With true multidimensional arrays can be compared to a matrix.</description></item><item><title>Hashtables</title><link>https://powershellbyexample.dev/post/hashtables/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/hashtables/</guid><description>In the arrays example we saw how to create arrays. In this example we will see how to create hashtables.
 A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare is to a key/value store database structure.
 To declare a hastable we use the @{} syntax:
-$employees = @{} This is different from the arrays where the @() is used.</description></item><item><title>Functions</title><link>https://powershellbyexample.dev/post/functions/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/functions/</guid><description/></item></channel></rss>
+$employees = @{} This is different from the arrays where the @() is used.</description></item><item><title>Functions</title><link>https://powershellbyexample.dev/post/functions/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/functions/</guid><description>Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.
+Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.
+To create a function we use the function keyword:
+function writeHelloWorld() { Write-Host &amp;#34;Hello World!&amp;#34; } writeHelloWorld Result:
+Hello World! Obviously this function is not very useful, but it is a good example how easy it is to create a function.</description></item></channel></rss>
