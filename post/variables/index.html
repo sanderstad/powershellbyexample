@@ -19,11 +19,11 @@
 <p>In PowerShell we can store all types of values in PowerShell variables. It&rsquo;s possible to store the results of commands, and store elements that are used in commands and expressions, such as names, paths, settings, and values.</p>
 <p>Variable unlike other languages are note case-sensitive, and can include spaces and special characters. Variable names with special characters and spaces are difficult to use and should be avoided. For more information, see <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2#variable-names-that-include-special-characters">Variable names that include special characters</a>.</p>
 <p>PowerShell automatically detects the type of the variable and converts it to the appropriate type. It is also possible to declare variables with a specific type.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$v = 1337                               <span style=color:#75715e># System.Int32</span>
-$v = <span style=color:#e6db74>&#34;Swifty&#34;</span>                           <span style=color:#75715e># System.String</span>
-$v = 31337, <span style=color:#e6db74>&#34;Swifty&#34;</span>                    <span style=color:#75715e># array of System.Int32, System.String</span>
-$v = Get-ChildItem C:\Windows           <span style=color:#75715e># FileInfo and DirectoryInfo types</span>
-New-Variable -Name v -Value 1337        <span style=color:#75715e># System.Int32</span>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$a = 1337                               <span style=color:#75715e># System.Int32</span>
+$b = <span style=color:#e6db74>&#34;Swifty&#34;</span>                           <span style=color:#75715e># System.String</span>
+$c = 31337, <span style=color:#e6db74>&#34;Swifty&#34;</span>                    <span style=color:#75715e># array of System.Int32, System.String</span>
+$d = Get-ChildItem C:\Windows           <span style=color:#75715e># FileInfo and DirectoryInfo types</span>
+New-Variable -Name e -Value 1337        <span style=color:#75715e># System.Int32</span>
 </code></pre></div><p>PowerShell is even smart enough to detect when a variable is assigned a value that is not of the same type and convert it to the appropriate type.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = <span style=color:#e6db74>&#34;1337&#34;</span>   <span style=color:#75715e># The string is converted to an integer.</span>
 $number.GetType()   <span style=color:#75715e># Get the type of the variable.</span>
