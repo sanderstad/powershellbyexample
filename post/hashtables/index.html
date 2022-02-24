@@ -1,0 +1,178 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Hashtables | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css>
+</head>
+<body>
+<nav>
+<ul class=menu>
+</ul>
+<hr>
+</nav>
+<div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example: Hashtables</a></span></h1>
+</div>
+<main>
+<p>In the arrays example we saw how to create arrays. In this example we will see how to create hashtables.</p>
+<p>A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare is to a key/value store database structure.</p>
+<p>To declare a hastable we use the <code>@{}</code> syntax:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employees = @{}
+</code></pre></div><p>This is different from the arrays where the <code>@()</code> is used.</p>
+<h2 id=adding-items-to-a-hashtable>Adding items to a hashtable</h2>
+<p>To add an item to a hashtable we use the <code>Add</code> method:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employees = @{}
+
+<span style=color:#75715e># Adding values using integers</span>
+$employees.Add(1, <span style=color:#e6db74>&#34;John&#34;</span>)
+$employees.Add(2, <span style=color:#e6db74>&#34;Mary&#34;</span>)
+$employees.Add(3, <span style=color:#e6db74>&#34;Bob&#34;</span>)
+$employees.Add(4, <span style=color:#e6db74>&#34;Sam&#34;</span>)
+
+$address = @{}
+
+<span style=color:#75715e># Adding values using strings</span>
+$address.Add(<span style=color:#e6db74>&#34;John&#34;</span>, <span style=color:#e6db74>&#34;123 Main Street&#34;</span>)
+$address.Add(<span style=color:#e6db74>&#34;Mary&#34;</span>, <span style=color:#e6db74>&#34;456 North Street&#34;</span>)
+$address.Add(<span style=color:#e6db74>&#34;Bob&#34;</span>, <span style=color:#e6db74>&#34;789 West Street&#34;</span>)
+$address.Add(<span style=color:#e6db74>&#34;Sam&#34;</span>, <span style=color:#e6db74>&#34;321 South Street&#34;</span>)
+
+<span style=color:#75715e># Creating the hashtable in one go with values</span>
+$zipCodes = @{
+    <span style=color:#e6db74>&#34;John&#34;</span> = <span style=color:#e6db74>&#34;12345&#34;</span>
+    <span style=color:#e6db74>&#34;Mary&#34;</span> = <span style=color:#e6db74>&#34;54321&#34;</span>
+    <span style=color:#e6db74>&#34;Bob&#34;</span> = <span style=color:#e6db74>&#34;98765&#34;</span>
+    <span style=color:#e6db74>&#34;Sam&#34;</span> = <span style=color:#e6db74>&#34;32145&#34;</span>
+}
+
+</code></pre></div><h2 id=accessing-items-from-a-hashtable>Accessing items from a hashtable</h2>
+<p>To access an item from a hashtable you use the <code>[key]</code> syntax:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employees[4]
+$address[<span style=color:#e6db74>&#34;Mary&#34;</span>]
+$zipCodes.Sam
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Sam
+456 North Street
+32145
+</code></pre><p>Notice that this looks similar like an array, but the key is used instead of the index.
+The key can be an integer or a string if you like.
+The example above also directly used the key to get the value in the hashtable.</p>
+<h2 id=loop-through-a-hashtable>Loop through a hashtable</h2>
+<p>Accessing a hashtable in a loop is similar to the example you saw before.<br>
+There are several ways we can loop through a hashtable.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employees.keys | Sort-Object $_ | ForEach-Object {
+    Write-Host <span style=color:#e6db74>&#34;Employee ID </span>$($_)<span style=color:#e6db74> : </span>$($employees[$_])<span style=color:#e6db74>&#34;</span>
+}
+
+<span style=color:#66d9ef>foreach</span> ($key <span style=color:#66d9ef>in</span> $address.Keys) {
+    Write-Host <span style=color:#e6db74>&#34;</span>$($key)<span style=color:#e6db74> lives at </span>$($address[$key])<span style=color:#e6db74>&#34;</span>
+}
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Employee ID 1 : John
+Employee ID 2 : Mary
+Employee ID 3 : Bob
+Employee ID 4 : Sam
+
+Bob lives at 789 West Street
+Mary lives at 456 North Street
+John lives at 123 Main Street
+Sam lives at 321 South Street
+</code></pre><p>Notice that we can use the <code>keys</code> method to get the keys of the hashtable and then use that particular value in the loops to get the value.
+The script also uses the <code>Sort-Object</code> command to sort the keys.</p>
+<h2 id=hastable-with-different-properties>Hastable with different properties</h2>
+<p>Within a hashtable you are not bound to the key/value pair.<br>
+You can create a hashtable with different properties.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employeeAddress = @{
+    Name    = <span style=color:#e6db74>&#34;Mary&#34;</span>
+    Address = <span style=color:#e6db74>&#34;456 North Street&#34;</span>
+    Zipcode = <span style=color:#e6db74>&#34;54321&#34;</span>
+}
+
+$employeeAddress
+</code></pre></div><pre tabindex=0><code>Name                           Value
+----                           -----
+Name                           Mary
+Zipcode                        54321
+Address                        456 North Street
+</code></pre><h2 id=removing-properties-from-a-hashtable>Removing properties from a hashtable</h2>
+<p>To remove a property from a hashtable you use the <code>Remove</code> method:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$employeeAddress = @{
+    Name    = <span style=color:#e6db74>&#34;Mary&#34;</span>
+    Address = <span style=color:#e6db74>&#34;456 North Street&#34;</span>
+    Zipcode = <span style=color:#e6db74>&#34;54321&#34;</span>
+}
+
+$employeeAddress.Remove(<span style=color:#e6db74>&#34;Zipcode&#34;</span>)
+
+$employeeAddress
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Name                           Value
+----                           -----
+Name                           Mary
+Address                        456 North Street
+</code></pre><h2 id=sort-a-hashtable>Sort a hashtable</h2>
+<p>There are various ways we can sort a hashtable.</p>
+<p>The first thing we can do is create an ordered hashtable. This will result in the keys to be sorted.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$addresses = @()
+
+$addresses += <span style=color:#66d9ef>[ordered]</span>@{Name = <span style=color:#e6db74>&#34;John&#34;</span>; Address = <span style=color:#e6db74>&#34;123 Main Street&#34;</span> }
+$addresses += <span style=color:#66d9ef>[ordered]</span>@{Name = <span style=color:#e6db74>&#34;Sam&#34;</span>; Address = <span style=color:#e6db74>&#34;321 South Street&#34;</span> }
+
+$addresses += @{Name = <span style=color:#e6db74>&#34;Mary&#34;</span>; Address = <span style=color:#e6db74>&#34;456 North Street&#34;</span> }
+$addresses += @{Name = <span style=color:#e6db74>&#34;Bob&#34;</span>; Address = <span style=color:#e6db74>&#34;789 West Street&#34;</span> }
+
+$addresses
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Name                           Value
+----                           -----
+Name                           Value
+----                           -----
+Name                           John
+Address                        123 Main Street
+Name                           Sam
+Address                        321 South Street
+
+Address                        456 North Street
+Name                           Mary
+Address                        789 West Street
+Name                           Bob
+</code></pre><p>What happens here is that the first and last item keys are ordered differently. In the first two rows the <code>Name</code> and <code>Address</code> keys are displayed and for the next two rows the <code>Address</code> and <code>Name</code> keys are displayed.<br>
+That is because it is possible to set the order in which the items need to be iterated through. Once the <code>ordered</code> keyword is used the items will be displayed in that order.</p>
+<p>Another thing we can do is sort the hashtables by key:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$addresses = @()
+
+$addresses += @{Name = <span style=color:#e6db74>&#34;John&#34;</span>; Address = <span style=color:#e6db74>&#34;123 Main Street&#34;</span> }
+$addresses += @{
+  Name = <span style=color:#e6db74>&#34;Sam&#34;</span>
+  Address = <span style=color:#e6db74>&#34;321 South Street&#34;</span> 
+}
+$addresses += @{Name = <span style=color:#e6db74>&#34;Mary&#34;</span>; Address = <span style=color:#e6db74>&#34;456 North Street&#34;</span> }
+$addresses += @{Name = <span style=color:#e6db74>&#34;Bob&#34;</span>; Address = <span style=color:#e6db74>&#34;789 West Street&#34;</span> }
+
+$addresses | Sort-Object -Property @{e = { $_.Name } }
+</code></pre></div><p>Result:</p>
+<pre tabindex=0><code>Name                           Value
+----                           -----
+Address                        789 West Street
+Name                           Bob
+Address                        123 Main Street
+Name                           John
+Address                        456 North Street
+Name                           Mary
+Address                        321 South Street
+Name                           Sam
+</code></pre>
+</main>
+<a class=previous href=/post/functions/>Next: Functions
+<footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p>
+<p>
+by <a href=https://sqlstad.nl>Sander Stad</a>
+</p>
+</footer>
+</body>
+</html>
