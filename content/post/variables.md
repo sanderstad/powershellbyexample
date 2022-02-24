@@ -13,11 +13,11 @@ Variable unlike other languages are note case-sensitive, and can include spaces 
 PowerShell automatically detects the type of the variable and converts it to the appropriate type. It is also possible to declare variables with a specific type.
 
 ```powershell
-$v = 1337                               # System.Int32
-$v = "Swifty"                           # System.String
-$v = 31337, "Swifty"                    # array of System.Int32, System.String
-$v = Get-ChildItem C:\Windows           # FileInfo and DirectoryInfo types
-New-Variable -Name v -Value 1337        # System.Int32
+$a = 1337                               # System.Int32
+$b = "Swifty"                           # System.String
+$c = 31337, "Swifty"                    # array of System.Int32, System.String
+$d = Get-ChildItem C:\Windows           # FileInfo and DirectoryInfo types
+New-Variable -Name e -Value 1337        # System.Int32
 ```
 
 PowerShell is even smart enough to detect when a variable is assigned a value that is not of the same type and convert it to the appropriate type.
