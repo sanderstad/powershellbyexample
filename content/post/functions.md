@@ -114,7 +114,7 @@ function writeMessage {
     )
 
     begin {
-        Write-Host "Beginning of script"
+        Write-Verbose "Beginning of script"
         if (($null -eq $Message) -or ($Message -eq "")) {
             throw "Message cannot be empty";
         }
@@ -129,7 +129,7 @@ function writeMessage {
     }
 }
 
-writeMessage "Hello World!"
+writeMessage "Hello World!" -Verbose
 ```
 
 Result:
