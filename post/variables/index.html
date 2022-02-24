@@ -28,7 +28,7 @@ New-Variable -Name v -Value 1337        <span style=color:#75715e># System.Int32
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = <span style=color:#e6db74>&#34;1337&#34;</span>   <span style=color:#75715e># The string is converted to an integer.</span>
 $number.GetType()   <span style=color:#75715e># Get the type of the variable.</span>
 </code></pre></div><p>As soon as the variable is assigned a value, it is considered to be of that data type. This means that it cannot be changed without converting it to a different type.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = <span style=color:#e6db74>&#34;1337&#34;</span> 
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$number = 1337
 $number = <span style=color:#e6db74>&#34;One Thousand, Three Hundred and Thirty-Seven&#34;</span>  <span style=color:#75715e>#This will give an error</span>
 </code></pre></div><div class=error>
 <pre tabindex=0><code>Cannot convert value &quot;One Thousand, Three Hundred and Thirty-Seven&quot; to type &quot;System.Int32&quot;. Error: &quot;Input string was not in a correct format.&quot;
