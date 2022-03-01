@@ -2,10 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Switch | PowerShell By Example</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title>
-<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<title>Switch | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
 <meta name=keywords content="powershell,progamming,tutorial">
 <link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
 <link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
@@ -23,97 +21,76 @@
 <meta property="og:title" content="Learning PowerShell By Example">
 <meta property="og:url" content="https://powershellbyexample.dev">
 <meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-</head>
-<body>
+</head><body>
 <nav>
 <ul class=menu>
-</ul>
-<hr>
-</nav>
-<div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Switch</span></h1>
-</div>
-<main>
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Switch</span></h1></div><main>
 <p>Switch statements are a way to execute different code based on different conditions.
-This approach can be more efficient than using multiple if/elseif statements</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$month = 3
-
-<span style=color:#66d9ef>if</span> ($month <span style=color:#f92672>-eq</span> 1) { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 2) { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 3) { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 4) { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 5) { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 6) { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 7) { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 8) { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 9) { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 10) { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 11) { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
-<span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 12) { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
-<span style=color:#66d9ef>else</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
-
-<span style=color:#75715e># Instead we can write the above as</span>
-<span style=color:#66d9ef>switch</span> ($month) {
-    1 { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
-    2 { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
-    3 { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
-    4 { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
-    5 { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
-    6 { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
-    7 { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
-    8 { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
-    9 { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
-    10 { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
-    11 { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
-    12 { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
-    <span style=color:#66d9ef>default</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>March
+This approach can be more efficient than using multiple if/elseif statements</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$month = 3
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>if</span> ($month <span style=color:#f92672>-eq</span> 1) { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 2) { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 3) { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 4) { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 5) { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 6) { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 7) { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 8) { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 9) { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 10) { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 11) { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>elseif</span> ($month <span style=color:#f92672>-eq</span> 12) { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>else</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Instead we can write the above as</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>switch</span> ($month) {
+</span></span><span style=display:flex><span>    1 { Write-Host <span style=color:#e6db74>&#34;January&#34;</span> }
+</span></span><span style=display:flex><span>    2 { Write-Host <span style=color:#e6db74>&#34;February&#34;</span> }
+</span></span><span style=display:flex><span>    3 { Write-Host <span style=color:#e6db74>&#34;March&#34;</span> }
+</span></span><span style=display:flex><span>    4 { Write-Host <span style=color:#e6db74>&#34;April&#34;</span> }
+</span></span><span style=display:flex><span>    5 { Write-Host <span style=color:#e6db74>&#34;May&#34;</span> }
+</span></span><span style=display:flex><span>    6 { Write-Host <span style=color:#e6db74>&#34;June&#34;</span> }
+</span></span><span style=display:flex><span>    7 { Write-Host <span style=color:#e6db74>&#34;July&#34;</span> }
+</span></span><span style=display:flex><span>    8 { Write-Host <span style=color:#e6db74>&#34;August&#34;</span> }
+</span></span><span style=display:flex><span>    9 { Write-Host <span style=color:#e6db74>&#34;September&#34;</span> }
+</span></span><span style=display:flex><span>    10 { Write-Host <span style=color:#e6db74>&#34;October&#34;</span> }
+</span></span><span style=display:flex><span>    11 { Write-Host <span style=color:#e6db74>&#34;November&#34;</span> }
+</span></span><span style=display:flex><span>    12 { Write-Host <span style=color:#e6db74>&#34;December&#34;</span> }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>default</span> { Write-Host <span style=color:#e6db74>&#34;Invalid month&#34;</span> }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>March
 March
-</code></pre><p>The result is the same but the code is much more readable.</p>
-<h2 id=wildcards>Wildcards</h2>
-<p>You can use wildcards in the condition of the case:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#75715e># Using the -Wildcard parameter</span>
-$msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
-<span style=color:#66d9ef>switch</span> <span style=color:#f92672>-Wildcard</span> ($msg) {
-    <span style=color:#e6db74>&#34;Error*&#34;</span> { <span style=color:#e6db74>&#34;Action error&#34;</span> }
-    <span style=color:#e6db74>&#34;Warning*&#34;</span> { <span style=color:#e6db74>&#34;Action warning&#34;</span> }
-    <span style=color:#e6db74>&#34;Successful*&#34;</span> { <span style=color:#e6db74>&#34;Action succesfull&#34;</span> }
-}
-
-<span style=color:#75715e>## Or use it in the conditions</span>
-$msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
-<span style=color:#66d9ef>switch</span> ($msg) {
-    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Error*&#34;</span> } { <span style=color:#e6db74>&#34;Action error&#34;</span> }
-    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Warning*&#34;</span> } { <span style=color:#e6db74>&#34;Action warning&#34;</span> }
-    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Successful*&#34;</span> } { <span style=color:#e6db74>&#34;Action succesfull&#34;</span> }
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Action error
+</code></pre><p>The result is the same but the code is much more readable.</p><h2 id=wildcards>Wildcards</h2><p>You can use wildcards in the condition of the case:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Using the -Wildcard parameter</span>
+</span></span><span style=display:flex><span>$msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>switch</span> <span style=color:#f92672>-Wildcard</span> ($msg) {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Error*&#34;</span> { <span style=color:#e6db74>&#34;Action error&#34;</span> }
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Warning*&#34;</span> { <span style=color:#e6db74>&#34;Action warning&#34;</span> }
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Successful*&#34;</span> { <span style=color:#e6db74>&#34;Action succesfull&#34;</span> }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Or use it in the conditions</span>
+</span></span><span style=display:flex><span>$msg = <span style=color:#e6db74>&#34;Error, the action failed&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>switch</span> ($msg) {
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Error*&#34;</span> } { <span style=color:#e6db74>&#34;Action error&#34;</span> }
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Warning*&#34;</span> } { <span style=color:#e6db74>&#34;Action warning&#34;</span> }
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-like</span> <span style=color:#e6db74>&#34;Successful*&#34;</span> } { <span style=color:#e6db74>&#34;Action succesfull&#34;</span> }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Action error
 Action error
-</code></pre><p>Both have the same result, but with the last example you are more flexible to the operators you want to use.</p>
-<h2 id=multiple-conditions>Multiple conditions</h2>
-<p>To use multiple expressions in a switch statement, you can use the <code>-and</code> and <code>-or</code> operators.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>switch</span> ((Get-Date).Day) {
-    { $_ <span style=color:#f92672>-le</span> 10 } { <span style=color:#e6db74>&#34;Day of the month is lower than 10&#34;</span> }
-    { $_ <span style=color:#f92672>-gt</span> 10 <span style=color:#f92672>-and</span> $_ <span style=color:#f92672>-le</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is between 10 and 25&#34;</span> }
-    { $_ <span style=color:#f92672>-gt</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is greater than 25&#34;</span> }
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Day of the month is between 10 and 25
-</code></pre>
-</main>
-<a class=previous href=/post/arrays/>Next: Arrays
+</code></pre><p>Both have the same result, but with the last example you are more flexible to the operators you want to use.</p><h2 id=multiple-conditions>Multiple conditions</h2><p>To use multiple expressions in a switch statement, you can use the <code>-and</code> and <code>-or</code> operators.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>switch</span> ((Get-Date).Day) {
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-le</span> 10 } { <span style=color:#e6db74>&#34;Day of the month is lower than 10&#34;</span> }
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-gt</span> 10 <span style=color:#f92672>-and</span> $_ <span style=color:#f92672>-le</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is between 10 and 25&#34;</span> }
+</span></span><span style=display:flex><span>    { $_ <span style=color:#f92672>-gt</span> 25 } { <span style=color:#e6db74>&#34;Day of the month is greater than 25&#34;</span> }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Day of the month is between 10 and 25
+</code></pre></main><a class=previous href=/post/arrays/>Next: Arrays
 <footer>
 <p>
 <a href=https://powershellbyexample.dev/>Home</a>
-</p>
-<p>
+</p><p>
 by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
 <a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p>
-</footer>
-</body>
-</html>
+</p></footer></body></html>

@@ -2,10 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Arrays | PowerShell By Example</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title>
-<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<title>Arrays | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
 <meta name=keywords content="powershell,progamming,tutorial">
 <link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
 <link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
@@ -23,26 +21,17 @@
 <meta property="og:title" content="Learning PowerShell By Example">
 <meta property="og:url" content="https://powershellbyexample.dev">
 <meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-</head>
-<body>
+</head><body>
 <nav>
 <ul class=menu>
-</ul>
-<hr>
-</nav>
-<div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Arrays</span></h1>
-</div>
-<main>
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Arrays</span></h1></div><main>
 <p>An array is a data structure that is designed to store a collection of items.<br>
-The items can be the same type or different types.</p>
-<h2 id=creating-arrays>Creating arrays</h2>
-<p>Define an array using the @()</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$values = @(<span style=color:#e6db74>&#34;One&#34;</span>, <span style=color:#e6db74>&#34;Two&#34;</span>, <span style=color:#e6db74>&#34;Three&#34;</span>, <span style=color:#e6db74>&#34;Four&#34;</span>, <span style=color:#e6db74>&#34;Five&#34;</span>)
-$values
-$values.GetType()
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>One
+The items can be the same type or different types.</p><h2 id=creating-arrays>Creating arrays</h2><p>Define an array using the @()</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$values = @(<span style=color:#e6db74>&#34;One&#34;</span>, <span style=color:#e6db74>&#34;Two&#34;</span>, <span style=color:#e6db74>&#34;Three&#34;</span>, <span style=color:#e6db74>&#34;Four&#34;</span>, <span style=color:#e6db74>&#34;Five&#34;</span>)
+</span></span><span style=display:flex><span>$values
+</span></span><span style=display:flex><span>$values.GetType()
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>One
 Two
 Three
 Four
@@ -51,51 +40,43 @@ Five
 IsPublic IsSerial Name                                     BaseType
 -------- -------- ----                                     --------
 True     True     Object[]                                 System.Array
-</code></pre><p>Define an array by setting with comma separated values</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$values = <span style=color:#e6db74>&#34;Six&#34;</span>, <span style=color:#e6db74>&#34;Seven&#34;</span>, <span style=color:#e6db74>&#34;Eight&#34;</span>, <span style=color:#e6db74>&#34;Nine&#34;</span>, <span style=color:#e6db74>&#34;10&#34;</span>
-$values
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Six
+</code></pre><p>Define an array by setting with comma separated values</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$values = <span style=color:#e6db74>&#34;Six&#34;</span>, <span style=color:#e6db74>&#34;Seven&#34;</span>, <span style=color:#e6db74>&#34;Eight&#34;</span>, <span style=color:#e6db74>&#34;Nine&#34;</span>, <span style=color:#e6db74>&#34;10&#34;</span>
+</span></span><span style=display:flex><span>$values
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Six
 Seven
 Eight
 Nine
 10
-</code></pre><p>Define an array with a specific type</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>[int[]]</span> $values = 6, 7, 8, 9, 10
-$values
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>6
+</code></pre><p>Define an array with a specific type</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>[int[]]</span> $values = 6, 7, 8, 9, 10
+</span></span><span style=display:flex><span>$values
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>6
 7
 8
 9
 10
-</code></pre><p>Define an array with the [array] type</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>[array]</span>$values = 11, 12, 13, 14, 15
-$values
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>11
+</code></pre><p>Define an array with the [array] type</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>[array]</span>$values = 11, 12, 13, 14, 15
+</span></span><span style=display:flex><span>$values
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>11
 12
 13
 14
 15
-</code></pre><h2 id=adding-and-changing-values-in-arrays>Adding and changing values in arrays</h2>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$values = @(<span style=color:#e6db74>&#34;One&#34;</span>, <span style=color:#e6db74>&#34;Two&#34;</span>, <span style=color:#e6db74>&#34;Three&#34;</span>)
-$values
-
-<span style=color:#75715e># Counting the items in the array using the Count property</span>
-Write-Host <span style=color:#e6db74>&#34;Items in array </span>$($values.Count)<span style=color:#e6db74>&#34;</span> 
-
-<span style=color:#75715e># Add a value to the array using the + operator</span>
-$values += <span style=color:#e6db74>&#34;Four&#34;</span>
-$values
-
-Write-Host <span style=color:#e6db74>&#34;Items in array </span>$($values.Count)<span style=color:#e6db74>&#34;</span> 
-
-<span style=color:#75715e># Change a value in the array using the index</span>
-$values[0] = <span style=color:#e6db74>&#34;Five&#34;</span>
-$values
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>One
+</code></pre><h2 id=adding-and-changing-values-in-arrays>Adding and changing values in arrays</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$values = @(<span style=color:#e6db74>&#34;One&#34;</span>, <span style=color:#e6db74>&#34;Two&#34;</span>, <span style=color:#e6db74>&#34;Three&#34;</span>)
+</span></span><span style=display:flex><span>$values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Counting the items in the array using the Count property</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Items in array </span>$($values.Count)<span style=color:#e6db74>&#34;</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Add a value to the array using the + operator</span>
+</span></span><span style=display:flex><span>$values += <span style=color:#e6db74>&#34;Four&#34;</span>
+</span></span><span style=display:flex><span>$values
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Items in array </span>$($values.Count)<span style=color:#e6db74>&#34;</span> 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Change a value in the array using the index</span>
+</span></span><span style=display:flex><span>$values[0] = <span style=color:#e6db74>&#34;Five&#34;</span>
+</span></span><span style=display:flex><span>$values
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>One
 Two
 Three
 Items in array 3
@@ -108,23 +89,17 @@ Five
 Two
 Three
 Four
-</code></pre><h2 id=accessing-arrays>Accessing arrays</h2>
-<p>To access the items in the array, use the index.<br>
-The index starts at 0.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>[array]</span>$values = 1, 2, 3, 4, 5
-
-<span style=color:#75715e># Access the third item in the array</span>
-Write-Host <span style=color:#e6db74>&#34;Item at index 2: </span>$($values[2])<span style=color:#e6db74>&#34;</span>
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Item at index 2: 3
-</code></pre><h2 id=looping-though-arrays>Looping though arrays</h2>
-<p>The same index method as the example before can be used with loops.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$nameArray = @(<span style=color:#e6db74>&#34;Erik&#34;</span>, <span style=color:#e6db74>&#34;Penny&#34;</span>, <span style=color:#e6db74>&#34;Randy&#34;</span>, <span style=color:#e6db74>&#34;Sandy&#34;</span>, <span style=color:#e6db74>&#34;Toby&#34;</span>, <span style=color:#e6db74>&#34;Uma&#34;</span>, <span style=color:#e6db74>&#34;Vicky&#34;</span>, <span style=color:#e6db74>&#34;Will&#34;</span>, <span style=color:#e6db74>&#34;Xavier&#34;</span>, <span style=color:#e6db74>&#34;Yvette&#34;</span>, <span style=color:#e6db74>&#34;Zach&#34;</span>)
-<span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-lt</span> $nameArray.Length; $i++) {
-    Write-Host $nameArray[$i]
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Erik
+</code></pre><h2 id=accessing-arrays>Accessing arrays</h2><p>To access the items in the array, use the index.<br>
+The index starts at 0.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>[array]</span>$values = 1, 2, 3, 4, 5
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Access the third item in the array</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Item at index 2: </span>$($values[2])<span style=color:#e6db74>&#34;</span>
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Item at index 2: 3
+</code></pre><h2 id=looping-though-arrays>Looping though arrays</h2><p>The same index method as the example before can be used with loops.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$nameArray = @(<span style=color:#e6db74>&#34;Erik&#34;</span>, <span style=color:#e6db74>&#34;Penny&#34;</span>, <span style=color:#e6db74>&#34;Randy&#34;</span>, <span style=color:#e6db74>&#34;Sandy&#34;</span>, <span style=color:#e6db74>&#34;Toby&#34;</span>, <span style=color:#e6db74>&#34;Uma&#34;</span>, <span style=color:#e6db74>&#34;Vicky&#34;</span>, <span style=color:#e6db74>&#34;Will&#34;</span>, <span style=color:#e6db74>&#34;Xavier&#34;</span>, <span style=color:#e6db74>&#34;Yvette&#34;</span>, <span style=color:#e6db74>&#34;Zach&#34;</span>)
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-lt</span> $nameArray.Length; $i++) {
+</span></span><span style=display:flex><span>    Write-Host $nameArray[$i]
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Erik
 Penny
 Randy
 Sandy
@@ -135,18 +110,12 @@ Will
 Xavier
 Yvette
 Zach
-</code></pre>
-</main>
-<a class=previous href=/post/multidimensional-arrays/>Next: Multidimensional Arrays
+</code></pre></main><a class=previous href=/post/multidimensional-arrays/>Next: Multidimensional Arrays
 <footer>
 <p>
 <a href=https://powershellbyexample.dev/>Home</a>
-</p>
-<p>
+</p><p>
 by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
 <a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p>
-</footer>
-</body>
-</html>
+</p></footer></body></html>

@@ -2,10 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>For | PowerShell By Example</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title>
-<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<title>For | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
 <meta name=keywords content="powershell,progamming,tutorial">
 <link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
 <link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
@@ -23,33 +21,24 @@
 <meta property="og:title" content="Learning PowerShell By Example">
 <meta property="og:url" content="https://powershellbyexample.dev">
 <meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-</head>
-<body>
+</head><body>
 <nav>
 <ul class=menu>
-</ul>
-<hr>
-</nav>
-<div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: For</span></h1>
-</div>
-<main>
-<p>Classic for loop</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = 1; $i <span style=color:#f92672>-le</span> 5; $i++){
-    Write-Host $i
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>1
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: For</span></h1></div><main>
+<p>Classic for loop</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>for</span> ($i = 1; $i <span style=color:#f92672>-le</span> 5; $i++){
+</span></span><span style=display:flex><span>    Write-Host $i
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>1
 2
 3
 4
 5
-</code></pre><p>We can also use text in our for loop conditions</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=color:#66d9ef>for</span> ($i = <span style=color:#e6db74>&#39;&#39;</span> ; $i.length <span style=color:#f92672>-le</span> 20; $i += <span style=color:#e6db74>&#39;=&#39;</span>){
-    Write-Host $i
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>=
+</code></pre><p>We can also use text in our for loop conditions</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>for</span> ($i = <span style=color:#e6db74>&#39;&#39;</span> ; $i.length <span style=color:#f92672>-le</span> 20; $i += <span style=color:#e6db74>&#39;=&#39;</span>){
+</span></span><span style=display:flex><span>    Write-Host $i
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>=
 ==
 ===
 ====
@@ -64,18 +53,12 @@
 ...
 ...
 ====================
-</code></pre>
-</main>
-<a class=previous href=/post/foreach/>Next: Foreach
+</code></pre></main><a class=previous href=/post/foreach/>Next: Foreach
 <footer>
 <p>
 <a href=https://powershellbyexample.dev/>Home</a>
-</p>
-<p>
+</p><p>
 by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
 <a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p>
-</footer>
-</body>
-</html>
+</p></footer></body></html>

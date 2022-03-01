@@ -2,10 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Hello World | PowerShell By Example</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title>
-<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<title>Hello World | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
 <meta name=keywords content="powershell,progamming,tutorial">
 <link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
 <link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
@@ -23,54 +21,36 @@
 <meta property="og:title" content="Learning PowerShell By Example">
 <meta property="og:url" content="https://powershellbyexample.dev">
 <meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-</head>
-<body>
+</head><body>
 <nav>
 <ul class=menu>
-</ul>
-<hr>
-</nav>
-<div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Hello World</span></h1>
-</div>
-<main>
-<p>As with every first program we write, we will print the classic &ldquo;hello world&rdquo; message. Here’s the full source code.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Write-Host <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
-<span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Hello, World!
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Hello World</span></h1></div><main>
+<p>As with every first program we write, we will print the classic &ldquo;hello world&rdquo; message. Here’s the full source code.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Hello, World!
 Hello, World!
-</code></pre><p>There is another method to print the output or the strings to screen and that is is <code>Write-Output</code>.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Write-Output <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
-<span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
-</code></pre></div><p>This will print the exact same thing as the previous snippet.</p>
-<p>Result:</p>
-<pre tabindex=0><code>Hello, World!
+</code></pre><p>There is another method to print the output or the strings to screen and that is is <code>Write-Output</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Write-Output <span style=color:#e6db74>&#39;Hello, World!&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
+</span></span></code></pre></div><p>This will print the exact same thing as the previous snippet.</p><p>Result:</p><pre tabindex=0><code>Hello, World!
 Hello, World!
-</code></pre><p>It all becomes different when the two commands are used to store the output.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$wh = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
-$wo = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
-
-Get-Variable wh
-
-Get-Variable wo
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>Name                           Value
+</code></pre><p>It all becomes different when the two commands are used to store the output.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$wh = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Host
+</span></span><span style=display:flex><span>$wo = <span style=color:#e6db74>&#39;Hello, World!&#39;</span> | Write-Output
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Get-Variable wh
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Get-Variable wo
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Name                           Value
 ----                           -----
 wh
 wo                             Hello, World!
-</code></pre><p>As you can see the <code>Write-Host</code> outputs the value to the console while the <code>Write-Output</code> command stores the output in the variable.</p>
-</main>
-<a class=previous href=/post/variables/>Next: Variables
+</code></pre><p>As you can see the <code>Write-Host</code> outputs the value to the console while the <code>Write-Output</code> command stores the output in the variable.</p></main><a class=previous href=/post/variables/>Next: Variables
 <footer>
 <p>
 <a href=https://powershellbyexample.dev/>Home</a>
-</p>
-<p>
+</p><p>
 by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
 <a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p>
-</footer>
-</body>
-</html>
+</p></footer></body></html>

@@ -2,10 +2,8 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<title>Foreach | PowerShell By Example</title>
-<link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title>
-<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<title>Foreach | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
 <meta name=keywords content="powershell,progamming,tutorial">
 <link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
 <link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
@@ -23,51 +21,35 @@
 <meta property="og:title" content="Learning PowerShell By Example">
 <meta property="og:url" content="https://powershellbyexample.dev">
 <meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-</head>
-<body>
+</head><body>
 <nav>
 <ul class=menu>
-</ul>
-<hr>
-</nav>
-<div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Foreach</span></h1>
-</div>
-<main>
-<p>Foreach is a loop that iterates over a collection.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
-
-<span style=color:#66d9ef>foreach</span>($item <span style=color:#66d9ef>in</span> $list){
-    Write-Host $item
-}
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>a
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Foreach</span></h1></div><main>
+<p>Foreach is a loop that iterates over a collection.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>foreach</span>($item <span style=color:#66d9ef>in</span> $list){
+</span></span><span style=display:flex><span>    Write-Host $item
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>a
 b
 c
 d
-</code></pre><p>The equivalent of the above is:</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
-
-$list | ForEach-Object { Write-Host $_ }
-</code></pre></div><p>Result:</p>
-<pre tabindex=0><code>a
+</code></pre><p>The equivalent of the above is:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$list | ForEach-Object { Write-Host $_ }
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>a
 b
 c
 d
-</code></pre><p>The <code>ForEach-Object</code> command has more options than the basic <code>foreach</code> loop. For more info about the <code>ForEach-Object</code> command run the <code>Get-Help</code> command.</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell>Get-Help ForEach-Object
-</code></pre></div>
-</main>
-<a class=previous href=/post/if-else/>Next: If/Else
+</code></pre><p>The <code>ForEach-Object</code> command has more options than the basic <code>foreach</code> loop. For more info about the <code>ForEach-Object</code> command run the <code>Get-Help</code> command.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Get-Help ForEach-Object
+</span></span></code></pre></div></main><a class=previous href=/post/if-else/>Next: If/Else
 <footer>
 <p>
 <a href=https://powershellbyexample.dev/>Home</a>
-</p>
-<p>
+</p><p>
 by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
 <a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p>
-</footer>
-</body>
-</html>
+</p></footer></body></html>

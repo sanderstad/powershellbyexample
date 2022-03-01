@@ -40,4 +40,7 @@ $employees = @{} This is different from the arrays where the @() is used.</descr
 Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.
 To create a function we use the function keyword:
 function writeHelloWorld() { Write-Host &amp;#34;Hello World!&amp;#34; } writeHelloWorld Result:
-Hello World! Obviously this function is not very useful, but it is a good example how easy it is to create a function.</description></item></channel></rss>
+Hello World! Obviously this function is not very useful, but it is a good example how easy it is to create a function.</description></item><item><title>Scopes</title><link>https://powershellbyexample.dev/post/variable-scopes/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/variable-scopes/</guid><description>When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.
+For example, when you create a variable in a function, it is only available in the function.
+When you create a variable in a script, it is available in the script and all functions in the script.
+There is a way to these items available outside it&amp;rsquo;s current scope.</description></item></channel></rss>
