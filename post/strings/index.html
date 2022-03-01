@@ -1,0 +1,187 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<title>Strings | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
+<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<meta name=keywords content="powershell,progamming,tutorial">
+<link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
+<link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
+<meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
+<meta name=twitter:site content="@sqlstad">
+<meta name=twitter:card content="summary_large_image">
+<meta name=twitter:title content="Learning PowerShell By Example">
+<meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+<meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
+<meta property="og:image:alt" content="PowerShell by Example">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="PowerShell By Example">
+<meta property="og:type" content="object">
+<meta property="og:title" content="Learning PowerShell By Example">
+<meta property="og:url" content="https://powershellbyexample.dev">
+<meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
+</head><body>
+<nav>
+<ul class=menu>
+</ul><hr>
+</nav><div class=article-meta>
+<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Strings</span></h1></div><main>
+<h1 id=defining-strings>Defining strings</h1><p>There are various ways you define a string in PpowerShell</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$var = <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Lorem ipsum dolor sit amet...&#34;</span>
+</span></span><span style=display:flex><span>$value1 = <span style=color:#e6db74>&#34;Ut enim ad minim veniam... $var&#34;</span>
+</span></span><span style=display:flex><span>$value2 = <span style=color:#e6db74>&#39;Duis aute irure dolor in... $var&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>[string]</span>$value3 = <span style=color:#e6db74>&#34;Excepteur sint occaecat cupidatat non proident...&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$value1, $value2, $value3
+</span></span><span style=display:flex><span>write-host $value1, $value2, $value3
+</span></span><span style=display:flex><span>write-host $value1 $value2 $value3
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Lorem ipsum dolor sit amet...
+Ut enim ad minim veniam... Hello World!
+Duis aute irure dolor in... $var
+Excepteur sint occaecat cupidatat non proident...
+Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepteur sint occaecat cupidatat non proident...
+Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepteur sint occaecat cupidatat non proident...
+</code></pre><p>In the third line in the example above, the string is written to screen because we haven&rsquo;t given PowerShell anything to do with it.</p><p>In the fourth line, we assign the string to a variable using double quotes. This is just a string. Although this is a string, using double quotes we are able to use variables in the string.</p><p>In the fifth line, we assign the string to a variable using single quotes. Again this is just a string. Because we are using single quotes, the string in the variable is taken literally and no variables can be included like in the fourth line.</p><p>In the fifth line, we assign the string to a variable using the PowerShell notation. This is also string.</p><p>In the remaining lines we print out the variables in a couple different ways.</p><h1 id=concatenating-strings>Concatenating Strings</h1><p>There are various ways you can concatenate strings in PowerShell.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$firstName = <span style=color:#e6db74>&#34;John&#34;</span>
+</span></span><span style=display:flex><span>$middleName = <span style=color:#e6db74>&#34;Hubert&#34;</span>
+</span></span><span style=display:flex><span>$lastName = <span style=color:#e6db74>&#34;Doe&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$fullName = $firstName + <span style=color:#e6db74>&#39; &#39;</span> + $middleName + <span style=color:#e6db74>&#39; &#39;</span> + $lastName
+</span></span><span style=display:flex><span>$fullName
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$fullName = <span style=color:#e6db74>&#34;$firstName $middleName $lastName&#34;</span>
+</span></span><span style=display:flex><span>$fullName
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>John Hubert Doe
+John Hubert Doe
+</code></pre><p>As you can see PowerShell is very flexible how you can concatenate strings.</p><h1 id=joining-strings>Joining Strings</h1><p>We can use the <code>-join</code> operator to join multiple items together. We can assign a delimiter to the operator to define what separates the items.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Join array</span>
+</span></span><span style=display:flex><span>$list = @(<span style=color:#e6db74>&#39;a&#39;</span>, <span style=color:#e6db74>&#39;b&#39;</span>, <span style=color:#e6db74>&#39;c&#39;</span>, <span style=color:#e6db74>&#39;d&#39;</span>, <span style=color:#e6db74>&#39;e&#39;</span>)
+</span></span><span style=display:flex><span>$list -join <span style=color:#e6db74>&#39;,&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Join array without declaring variable</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#39;f&#39;</span>, <span style=color:#e6db74>&#39;g&#39;</span>, <span style=color:#e6db74>&#39;h&#39;</span>, <span style=color:#e6db74>&#39;i&#39;</span>, <span style=color:#e6db74>&#39;j&#39;</span> -join <span style=color:#e6db74>&#39;-&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Join array with separator</span>
+</span></span><span style=display:flex><span>-join (<span style=color:#e6db74>&#39;k&#39;</span>, <span style=color:#e6db74>&#39;l&#39;</span>, <span style=color:#e6db74>&#39;m&#39;</span>, <span style=color:#e6db74>&#39;n&#39;</span>, <span style=color:#e6db74>&#39;o&#39;</span>)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Using .Net string.Join</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>[string]</span>::Join(<span style=color:#e6db74>&#39;|&#39;</span>, <span style=color:#e6db74>&#39;p&#39;</span>, <span style=color:#e6db74>&#39;q&#39;</span>, <span style=color:#e6db74>&#39;r&#39;</span>, <span style=color:#e6db74>&#39;s&#39;</span>, <span style=color:#e6db74>&#39;t&#39;</span>)
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>a,b,c,d,e
+f-g-h-i-j
+klmno
+p|q|r|s|t
+</code></pre><h1 id=splitting-strings>Splitting Strings</h1><p>Instead of joining strings, we can use the <code>-split</code> operator to split a string into an array.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$string1 = <span style=color:#e6db74>&#34;a,b,c,d,e&#34;</span>
+</span></span><span style=display:flex><span>$string2 = <span style=color:#e6db74>&#34;f-g-h-i-j&#34;</span>
+</span></span><span style=display:flex><span>$string3 = <span style=color:#e6db74>&#39;monday,tuesday,wednesday,thursday,friday,saturday,sunday&#39;</span>
+</span></span><span style=display:flex><span>$string4 = <span style=color:#e6db74>&#39;one1two2three3four4five5six6seven7&#39;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Splitting based on comma with .Split()</span>
+</span></span><span style=display:flex><span>$result1 = $string1.split(<span style=color:#e6db74>&#34;,&#34;</span>)
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Count of items split: &#34;</span> $result1.Count
+</span></span><span style=display:flex><span>Write-Host $result1
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Splitting based on hyphen with -split()</span>
+</span></span><span style=display:flex><span>$result2 = $string2 -split <span style=color:#e6db74>&#34;-&#34;</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Count of items split: &#34;</span> $result2.Count
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Splitting based on a part of the string with -split</span>
+</span></span><span style=display:flex><span>$string3 -split <span style=color:#e6db74>&#34;day&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Split the string based on a try/catch block</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># and limit the amount of items returned (3)</span>
+</span></span><span style=display:flex><span>$string4 -split {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>try</span> {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>[int]</span>$_ <span style=color:#f92672>-gt</span> 1
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>catch</span> {
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Just ignore it</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}, 3
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Count of items split:  5
+a b c d e
+
+Count of items split:  5
+
+mon
+,tues
+,wednes
+,thurs
+,fri
+,satur
+,sun
+
+one1two
+three
+four4five5six6seven7
+</code></pre><p>In the first part the string is split based on the comma. The result is an array with 5 items.<br>
+In the second part the string is split based on the hyphen with a different method.<br>
+In the third part the string is split based on a part of a word.<br>
+In the fourth part the string is split based on a try/catch block, but the amount of items returned is limited to 3.</p><h1 id=formatting-strings>Formatting Strings</h1><p>Formatting strings is something that can really make your code better readable.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-PowerShell data-lang=PowerShell><span style=display:flex><span>$firstName = <span style=color:#e6db74>&#34;John&#34;</span>
+</span></span><span style=display:flex><span>$middleName = <span style=color:#e6db74>&#34;Hubert&#34;</span>
+</span></span><span style=display:flex><span>$lastName = <span style=color:#e6db74>&#34;Doe&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Format the names</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;{0} {1} {2}&#34;</span> <span style=color:#f92672>-f</span> $firstName, $middleName, $lastName
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Format the names but also do something else</span>
+</span></span><span style=display:flex><span><span style=color:#e6db74>&#34;{0}.{1}@awesomecorp.com&#34;</span> <span style=color:#f92672>-f</span> $firstName.Substring(0, 1), $lastName
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>John Hubert Doe
+J.Doe@awesomecorp.com
+</code></pre><h1 id=strings-in-objects>Strings in Objects</h1><p>With PowerShell we can do a lot of things with custom objects and we may want to use the values within.<br>
+Using these values is something that in some cases need to be done in a certain way.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Create a simple object</span>
+</span></span><span style=display:flex><span>$person = @{
+</span></span><span style=display:flex><span>    FirstName = <span style=color:#e6db74>&#39;John&#39;</span>
+</span></span><span style=display:flex><span>    LastName  = <span style=color:#e6db74>&#39;Doe&#39;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span><span style=color:#75715e># Let&#39;s see what we have</span>
+</span></span><span style=display:flex><span>$person
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Use the object by referencing a property</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>`n</span><span style=color:#e6db74>Hello, &#34;</span> $person.FirstName
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Setup the full name of the person using the properties</span>
+</span></span><span style=display:flex><span>$fullName = $person.FirstName + <span style=color:#e6db74>&#39; &#39;</span> + $person.LastName
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>`n</span><span style=color:#e6db74>Hello, &#34;</span> $fullName
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Try to add the properties to a string</span>
+</span></span><span style=display:flex><span>$fullName = <span style=color:#e6db74>&#34;$person.FirstName $person.LastName&#34;</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;</span><span style=color:#ae81ff>`n</span><span style=color:#e6db74>Hello, &#34;</span> $fullName <span style=color:#75715e># This will fail</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Let&#39;s add them the proper way</span>
+</span></span><span style=display:flex><span>$fullName = <span style=color:#e6db74>&#34;</span>$($person.FirstName)<span style=color:#e6db74> </span>$($person.LastName)<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Hello, &#34;</span> $fullName <span style=color:#75715e># This will work</span>
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Name                           Value
+----                           -----
+LastName                       Doe
+FirstName                      John
+
+Hello,  John
+
+Hello,  John Doe
+
+Hello,  System.Collections.Hashtable.FirstName System.Collections.Hashtable.LastName
+Hello,  John Doe
+</code></pre><p>As you can see the first two examples work pretty well. We can retrieve the values using the properties of the object.</p><p>In the third example we see we can&rsquo;t just add the properties to a string. We need to use the PowerShell notation to do this.</p><p>In the fourth example we use the PowerShell notation to add the properties to a string.</p><h1 id=replacing-strings>Replacing Strings</h1><p>Replacing values in strings is something that is very handy in situation where you may use templates and want to replace certain values.
+Or maybe you have a CSV file and want to replace the delimiter from a comma to a semi-colon.</p><p>You can either use the <code>.Replace()</code> method or the <code>-replace</code> operator.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Setup the query</span>
+</span></span><span style=display:flex><span>$query = <span style=color:#e6db74>&#34;SELECT * FROM [_SCHEMANAME_].[_TABLENAME_] WHERE `id` = _ID_&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Replace the templated values using the .Replace() method</span>
+</span></span><span style=display:flex><span>$query = $query.Replace(<span style=color:#e6db74>&#34;_SCHEMANAME_&#34;</span>, <span style=color:#e6db74>&#34;dbo&#34;</span>);
+</span></span><span style=display:flex><span>$query = $query.Replace(<span style=color:#e6db74>&#34;_TABLENAME_&#34;</span>, <span style=color:#e6db74>&#34;tbl_test&#34;</span>);
+</span></span><span style=display:flex><span>$query = $query.Replace(<span style=color:#e6db74>&#34;_ID_&#34;</span>, <span style=color:#e6db74>&#34;1&#34;</span>);
+</span></span><span style=display:flex><span>$query
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Replace the delimiter for the CSV using the -replace operator</span>
+</span></span><span style=display:flex><span>$csv = <span style=color:#e6db74>&#34;a,b,c,d,e,f,g,h,i&#34;</span>
+</span></span><span style=display:flex><span>$csv <span style=color:#f92672>-replace</span> <span style=color:#e6db74>&#34;,&#34;</span>, <span style=color:#e6db74>&#34;;&#34;</span>
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>SELECT * FROM [dbo].[tbl_test] WHERE id = 1
+a;b;c;d;e;f;g;h;i
+</code></pre></main><footer>
+<p>
+<a href=https://powershellbyexample.dev/>Home</a>
+</p><p>
+by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
+<a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
+<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
+</p></footer></body></html>
