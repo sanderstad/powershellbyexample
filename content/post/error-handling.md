@@ -63,7 +63,7 @@ As you can see the specific error is returned instead of the general catch.
 ```powershell
 try {
     # This will generate an error
-    1/1
+    1/0
     Write-Host "This is executed after the error"
 } catch [System.DivideByZeroException] {
     # Catch all errors
