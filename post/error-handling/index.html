@@ -56,7 +56,7 @@ Attempted to divide by zero.
 Attempted to divide by zero.
 </code></pre><p>As you can see the specific error is returned instead of the general catch.</p><h2 id=using-finally>Using finally</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>try</span> {
 </span></span><span style=display:flex><span>    <span style=color:#75715e># This will generate an error</span>
-</span></span><span style=display:flex><span>    1/1
+</span></span><span style=display:flex><span>    1/0
 </span></span><span style=display:flex><span>    Write-Host <span style=color:#e6db74>&#34;This is executed after the error&#34;</span>
 </span></span><span style=display:flex><span>} <span style=color:#66d9ef>catch</span> <span style=color:#66d9ef>[System.DivideByZeroException]</span> {
 </span></span><span style=display:flex><span>    <span style=color:#75715e># Catch all errors</span>
