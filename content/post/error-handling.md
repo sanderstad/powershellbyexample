@@ -84,4 +84,4 @@ Attempted to divide by zero.
 Finally!
 ```
 
-AS you can see the finally is always executed whether or not we have an error.
+As you can see the finally is always executed whether or not we have an error.
