@@ -152,7 +152,7 @@ Line |
      |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
      | Cannot find path 'C:\Users\Sander\AppData\Local\Temp\System.Diagnostics.Process (pwsh)-3.txt' because it does not exist.
 ```
-{{< error >}}
+{{< /error >}}
 
 ### SilentlyContinue
 
