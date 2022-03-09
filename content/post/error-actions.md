@@ -1,7 +1,7 @@
 ---
-title: Errors
+title: Error Actions
 author: Sander Stad
-date: '2022-03-04'
+date: '2022-03-09'
 categories:
   - Example
 weight: 150
@@ -213,7 +213,6 @@ $error[0]
 THe result should be that the script returns nothing at all.
 
 ### Inquire
-
 
 With `Inquire` PowerShellhelps when an error occurred due to cmdlet. It will give the option to the user with choices and prompt for appropriate action.
 
