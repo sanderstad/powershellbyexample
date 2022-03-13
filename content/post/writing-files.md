@@ -46,9 +46,31 @@ Test2Test3
 
 ## Out-File
 
+The `Out-File` command is easiest used in combination with a pipe ("|").
 
+```powershell
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit" | Out-File -FilePath c:\temp\output1.txt
+Get-Content C:\temp\output1.txt
+```
 
-## Write-Output
+Result:
 
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+```
 
+Without any other parameter `Out-File` will overwrite the file. We can use the `-Append` parameter to append text.
+
+```powershell
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit" | Out-File -FilePath c:\temp\output2.txt
+"Ut enim ad minim veniam, quis nostrud" | Out-File -FilePath c:\temp\output2.txt -Append
+Get-Content C:\temp\output2.txt
+```
+
+Result:
+
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit
+Ut enim ad minim veniam, quis nostrud
+```
 
