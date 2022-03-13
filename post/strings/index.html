@@ -1,37 +1,5 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Strings | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta name=keywords content="powershell,progamming,tutorial">
-<link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
-<link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
-<meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta name=twitter:site content="@sqlstad">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="Learning PowerShell By Example">
-<meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta property="og:image:alt" content="PowerShell by Example">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="600">
-<meta property="og:site_name" content="PowerShell By Example">
-<meta property="og:type" content="object">
-<meta property="og:title" content="Learning PowerShell By Example">
-<meta property="og:url" content="https://powershellbyexample.dev">
-<meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head><body>
-<nav>
-<ul class=menu>
-</ul><hr>
-</nav><div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Strings</span></h1></div><main>
-<h1 id=defining-strings>Defining strings</h1><p>There are various ways you define a string in PpowerShell</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$var = <span style=color:#e6db74>&#34;Hello World!&#34;</span>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Strings | PowerShell By Example</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Strings</span></h1></div><main><h1 id=defining-strings>Defining strings</h1><p>There are various ways you define a string in PpowerShell</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$var = <span style=color:#e6db74>&#34;Hello World!&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#e6db74>&#34;Lorem ipsum dolor sit amet...&#34;</span>
 </span></span><span style=display:flex><span>$value1 = <span style=color:#e6db74>&#34;Ut enim ad minim veniam... $var&#34;</span>
@@ -119,10 +87,7 @@ mon
 one1two
 three
 four4five5six6seven7
-</code></pre><p>In the first part the string is split based on the comma. The result is an array with 5 items.<br>
-In the second part the string is split based on the hyphen with a different method.<br>
-In the third part the string is split based on a part of a word.<br>
-In the fourth part the string is split based on a try/catch block, but the amount of items returned is limited to 3.</p><h1 id=formatting-strings>Formatting Strings</h1><p>Formatting strings is something that can really make your code better readable.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-PowerShell data-lang=PowerShell><span style=display:flex><span>$firstName = <span style=color:#e6db74>&#34;John&#34;</span>
+</code></pre><p>In the first part the string is split based on the comma. The result is an array with 5 items.<br>In the second part the string is split based on the hyphen with a different method.<br>In the third part the string is split based on a part of a word.<br>In the fourth part the string is split based on a try/catch block, but the amount of items returned is limited to 3.</p><h1 id=formatting-strings>Formatting Strings</h1><p>Formatting strings is something that can really make your code better readable.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-PowerShell data-lang=PowerShell><span style=display:flex><span>$firstName = <span style=color:#e6db74>&#34;John&#34;</span>
 </span></span><span style=display:flex><span>$middleName = <span style=color:#e6db74>&#34;Hubert&#34;</span>
 </span></span><span style=display:flex><span>$lastName = <span style=color:#e6db74>&#34;Doe&#34;</span>
 </span></span><span style=display:flex><span>
@@ -133,8 +98,7 @@ In the fourth part the string is split based on a try/catch block, but the amoun
 </span></span><span style=display:flex><span><span style=color:#e6db74>&#34;{0}.{1}@awesomecorp.com&#34;</span> <span style=color:#f92672>-f</span> $firstName.Substring(0, 1), $lastName
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>John Hubert Doe
 J.Doe@awesomecorp.com
-</code></pre><h1 id=strings-in-objects>Strings in Objects</h1><p>With PowerShell we can do a lot of things with custom objects and we may want to use the values within.<br>
-Using these values is something that in some cases need to be done in a certain way.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Create a simple object</span>
+</code></pre><h1 id=strings-in-objects>Strings in Objects</h1><p>With PowerShell we can do a lot of things with custom objects and we may want to use the values within.<br>Using these values is something that in some cases need to be done in a certain way.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Create a simple object</span>
 </span></span><span style=display:flex><span>$person = @{
 </span></span><span style=display:flex><span>    FirstName = <span style=color:#e6db74>&#39;John&#39;</span>
 </span></span><span style=display:flex><span>    LastName  = <span style=color:#e6db74>&#39;Doe&#39;</span>
@@ -181,12 +145,6 @@ Or maybe you have a CSV file and want to replace the delimiter from a comma to a
 </span></span><span style=display:flex><span>$csv <span style=color:#f92672>-replace</span> <span style=color:#e6db74>&#34;,&#34;</span>, <span style=color:#e6db74>&#34;;&#34;</span>
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>SELECT * FROM [dbo].[tbl_test] WHERE id = 1
 a;b;c;d;e;f;g;h;i
-</code></pre></main><a class=previous href=/post/error-actions/>Next: Error Actions
-<footer>
-<p>
-<a href=https://powershellbyexample.dev/>Home</a>
-</p><p>
-by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
+</code></pre></main><a class=previous href=/post/error-actions/>Next: Error Actions<footer><p><a href=https://powershellbyexample.dev/>Home</a></p><p>by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
-<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p></footer></body></html>
+<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a></p></footer></body></html>

@@ -1,39 +1,5 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Scopes | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta name=keywords content="powershell,progamming,tutorial">
-<link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
-<link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
-<meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta name=twitter:site content="@sqlstad">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="Learning PowerShell By Example">
-<meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta property="og:image:alt" content="PowerShell by Example">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="600">
-<meta property="og:site_name" content="PowerShell By Example">
-<meta property="og:type" content="object">
-<meta property="og:title" content="Learning PowerShell By Example">
-<meta property="og:url" content="https://powershellbyexample.dev">
-<meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head><body>
-<nav>
-<ul class=menu>
-</ul><hr>
-</nav><div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Scopes</span></h1></div><main>
-<p>When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.<br>
-For example, when you create a variable in a function, it is only available in the function.<br>
-When you create a variable in a script, it is available in the script and all functions in the script.</p><p>There is a way to these items available outside it&rsquo;s current scope.</p><h2 id=local>Local</h2><p>The local scope is relative to whatever context the code runs in at the time.</p><p>To define an item local you use the <em>local:</em> modifier. By default the scope of a variable is the <em>Local</em> scope.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$var = <span style=color:#e6db74>&#34;bla&#34;</span>
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Scopes | PowerShell By Example</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Scopes</span></h1></div><main><p>When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.<br>For example, when you create a variable in a function, it is only available in the function.<br>When you create a variable in a script, it is available in the script and all functions in the script.</p><p>There is a way to these items available outside it&rsquo;s current scope.</p><h2 id=local>Local</h2><p>The local scope is relative to whatever context the code runs in at the time.</p><p>To define an item local you use the <em>local:</em> modifier. By default the scope of a variable is the <em>Local</em> scope.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$var = <span style=color:#e6db74>&#34;bla&#34;</span>
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>$var
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>bla
@@ -96,12 +62,6 @@ Inside function with private, var1 =
 </span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Var 2: $Var2&#34;</span>
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Var 1: Script Scoped
 Var 2: 
-</code></pre><p>As you can see the script is not able to access the variables <code>$Var2</code> but is able to access the variable <code>$VarOne</code>.</p></main><a class=previous href=/post/strings/>Next: Strings
-<footer>
-<p>
-<a href=https://powershellbyexample.dev/>Home</a>
-</p><p>
-by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
+</code></pre><p>As you can see the script is not able to access the variables <code>$Var2</code> but is able to access the variable <code>$VarOne</code>.</p></main><a class=previous href=/post/strings/>Next: Strings<footer><p><a href=https://powershellbyexample.dev/>Home</a></p><p>by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
-<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p></footer></body></html>
+<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a></p></footer></body></html>

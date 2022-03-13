@@ -1,38 +1,5 @@
-<!doctype html><html lang=en-us>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Functions | PowerShell By Example</title><link rel=stylesheet href=/css/style.css>
-<link rel=stylesheet href=/css/fonts.css> <title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta name=keywords content="powershell,progamming,tutorial">
-<link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev>
-<link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png>
-<meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta name=twitter:site content="@sqlstad">
-<meta name=twitter:card content="summary_large_image">
-<meta name=twitter:title content="Learning PowerShell By Example">
-<meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png">
-<meta property="og:image:alt" content="PowerShell by Example">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="600">
-<meta property="og:site_name" content="PowerShell By Example">
-<meta property="og:type" content="object">
-<meta property="og:title" content="Learning PowerShell By Example">
-<meta property="og:url" content="https://powershellbyexample.dev">
-<meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs.">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
-<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script>
-<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script>
-<script async src=https://www.google-analytics.com/analytics.js></script>
-</head><body>
-<nav>
-<ul class=menu>
-</ul><hr>
-</nav><div class=article-meta>
-<h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Functions</span></h1></div><main>
-<p>Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.<br>
-Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.</p><p>To create a function we use the <code>function</code> keyword:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>function</span> writeHelloWorld() {
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Functions | PowerShell By Example</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM",{anonymize_ip:!1})}</script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","G-WRS58SRCQM","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Functions</span></h1></div><main><p>Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.<br>Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.</p><p>To create a function we use the <code>function</code> keyword:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>function</span> writeHelloWorld() {
 </span></span><span style=display:flex><span>    Write-Host <span style=color:#e6db74>&#34;Hello World!&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -50,9 +17,7 @@ Also when creating PowerShell modules you should really consider putting code in
 </span></span><span style=display:flex><span>writeMessage -message <span style=color:#e6db74>&#34;Who is there?&#34;</span>
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Message: Hello World!
 Message: Who is there?
-</code></pre><p>Notice that we can pass parameters with and without specifying the parameter.</p><h2 id=adding-advanced-functionality>Adding advanced functionality</h2><p>To make a function more advanced we can add <code>[CmdletBinding()]</code> to the function.<br>
-This enabled you to support for:</p><ul>
-<li>Confirming for impact</li><li>Help URI</li><li>Support paging</li><li>Should process</li><li>Positional binding</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>function</span> writeMessage {
+</code></pre><p>Notice that we can pass parameters with and without specifying the parameter.</p><h2 id=adding-advanced-functionality>Adding advanced functionality</h2><p>To make a function more advanced we can add <code>[CmdletBinding()]</code> to the function.<br>This enabled you to support for:</p><ul><li>Confirming for impact</li><li>Help URI</li><li>Support paging</li><li>Should process</li><li>Positional binding</li></ul><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#66d9ef>function</span> writeMessage {
 </span></span><span style=display:flex><span>    <span style=color:#66d9ef>param</span>(
 </span></span><span style=display:flex><span>        [<span style=color:#66d9ef>Parameter</span>(<span style=color:#66d9ef>Mandatory</span> = $true, <span style=color:#66d9ef>Position</span> = 1, <span style=color:#66d9ef>HelpMessage</span> = <span style=color:#e6db74>&#34;The message to write&#34;</span>)]
 </span></span><span style=display:flex><span>        <span style=color:#66d9ef>[string]</span>$Message
@@ -103,13 +68,6 @@ Line |
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Beginning of script
 Message: Hello World!
 End of script
-</code></pre><p>For more information about advanced function go to the Microsoft Docs website:</p><ul>
-<li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.2">Functions</a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced?view=powershell-7.2">Advanced Functions</a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters?view=powershell-7.2">Advanced Parameters</a></li></ul></main><a class=previous href=/post/variable-scopes/>Next: Scopes
-<footer>
-<p>
-<a href=https://powershellbyexample.dev/>Home</a>
-</p><p>
-by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
+</code></pre><p>For more information about advanced function go to the Microsoft Docs website:</p><ul><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions?view=powershell-7.2">Functions</a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced?view=powershell-7.2">Advanced Functions</a></li><li><a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_functions_advanced_parameters?view=powershell-7.2">Advanced Parameters</a></li></ul></main><a class=previous href=/post/variable-scopes/>Next: Scopes<footer><p><a href=https://powershellbyexample.dev/>Home</a></p><p>by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
 <a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
-<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a>
-</p></footer></body></html>
+<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a></p></footer></body></html>
