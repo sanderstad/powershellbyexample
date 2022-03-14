@@ -113,3 +113,31 @@ The same actions can be done with the other add functions like:
 | AddTicks        | Method      | datetime AddTicks(long value)          |
 | AddYears        | Method      | datetime AddYears(int value)           |
 
+## Set specific date and time
+
+To Set the date and time we can use the `Set-Date` command.
+
+```powershell
+$date = Get-Date -Date "2022-01-02 03:04:05"
+$date
+```
+
+Result:
+
+```
+Sunday, January 2, 2022 3:04:05 AM
+```
+
+You can also set the current date but then change one part of it with for instance the month:
+
+```powershell
+# Assume with this example that the current date is 2022-03-14
+$date = get-date -Month 5
+$date
+```
+
+Result:
+
+```
+Saturday, May 14, 2022 8:46:27 PM
+```
