@@ -26,7 +26,7 @@ Result:
 Monday, March 14, 2022 4:40:48 PM
 ```
 
-## Date parts
+## Date and time parts
 
 To get specific values from the command we can use the properties in the `[datetime]` type.
 
