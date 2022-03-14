@@ -32,17 +32,17 @@ To get specific values from the command we can use the properties in the `[datet
 
 ```powershell
 $today = Get-Date
-"Full Date: `t$today"
-"Date: `t`t$($today.Date)"
-"Year: `t`t$($today.Year)"
-"Month: `t`t$($today.Month)"
-"Day: `t`t$($today.Day)"
-"Day of the Week: $($today.DayOfWeek)"
-"Day of the Year: $($today.DayOfYear)"
-"Hour: `t`t$($today.Hour)"
-"Minute: `t$($today.Minute)"
-"Second: `t$($today.Second)"
-"Millisecond: $($today.Millisecond)"
+Write-Host "Full Date: `t$today"
+Write-Host "Date: `t`t$($today.Date)"
+Write-Host "Year: `t`t$($today.Year)"
+Write-Host "Month: `t`t$($today.Month)"
+Write-Host "Day: `t`t$($today.Day)"
+Write-Host "Day of the Week: $($today.DayOfWeek)"
+Write-Host "Day of the Year: $($today.DayOfYear)"
+Write-Host "Hour: `t`t$($today.Hour)"
+Write-Host "Minute: `t$($today.Minute)"
+Write-Host "Second: `t$($today.Second)"
+Write-Host "Millisecond: $($today.Millisecond)"
 ```
 
 Result:
@@ -86,9 +86,9 @@ It is possible to add and subtract dates in powershell. The functions may seem c
 $today = Get-Date
 $yesterday = $today.AddDays(-1)
 $tomorrow = $today.AddDays(1)
-"Today: `t`t$today"
-"Yesterday: `t$yesterday"
-"Tomorrow: `t$tomorrow"
+Write-Host "Today: `t`t$today"
+Write-Host "Yesterday: `t$yesterday"
+Write-Host "Tomorrow: `t$tomorrow"
 ```
 
 Result:
@@ -112,3 +112,4 @@ The same actions can be done with the other add functions like:
 | AddSeconds      | Method      | datetime AddSeconds(double value)      |
 | AddTicks        | Method      | datetime AddTicks(long value)          |
 | AddYears        | Method      | datetime AddYears(int value)           |
+
