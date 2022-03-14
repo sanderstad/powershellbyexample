@@ -103,6 +103,7 @@ The same actions can be done with the other add functions like:
 
 | Functions       | Description | Type                                   |
 | --------------- | ----------- | -------------------------------------- |
+| Add             | Method      | datetime Add(timespan value)           |
 | AddDays         | Method      | datetime AddDays(double value)         |
 | AddHours        | Method      | datetime AddHours(double value)        |
 | AddMilliseconds | Method      | datetime AddMilliseconds(double value) |
