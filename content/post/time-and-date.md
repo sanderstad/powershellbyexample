@@ -78,9 +78,9 @@ Monday, March 14, 2022 4:47:03 PM
 03/14/2022 16:47:03
 ```
 
-## Adding and subtracting 
+## Adding and subtracting
 
-It is possible to add and subtract dates in powershell. The functions may seem confusing but you can add using positive numbers and subtract using negative numbers.
+It is possible to add and subtract dates in PowerShell. The functions may seem confusing but you can add using positive numbers and subtract using negative numbers.
 
 ```powershell
 $today = Get-Date

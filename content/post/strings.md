@@ -10,7 +10,7 @@ weight: 140
 
 # Defining strings
 
-There are various ways you define a string in PpowerShell
+There are various ways you define a string in PowerShell
 
 
 ```powershell
@@ -37,15 +37,15 @@ Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepte
 Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepteur sint occaecat cupidatat non proident...
 ```
 
-In the third line in the example above, the string is written to screen because we haven't given PowerShell anything to do with it.  
+In the third line in the example above, the string is written to screen because we haven't given PowerShell anything to do with it.
 
-In the fourth line, we assign the string to a variable using double quotes. This is just a string. Although this is a string, using double quotes we are able to use variables in the string.  
+In the fourth line, we assign the string to a variable using double quotes. This is just a string. Although this is a string, using double quotes we are able to use variables in the string.
 
-In the fifth line, we assign the string to a variable using single quotes. Again this is just a string. Because we are using single quotes, the string in the variable is taken literally and no variables can be included like in the fourth line.  
+In the fifth line, we assign the string to a variable using single quotes. Again this is just a string. Because we are using single quotes, the string in the variable is taken literally and no variables can be included like in the fourth line.
 
-In the fifth line, we assign the string to a variable using the PowerShell notation. This is also string.
+In the sixth line, we assign the string to a variable using the PowerShell notation. This is also string.
 
-In the remaining lines we print out the variables in a couple different ways. 
+In the remaining lines we print out the variables in a couple different ways.
 
 # Concatenating Strings
 
@@ -84,7 +84,7 @@ $list -join ','
 # Join array without declaring variable
 'f', 'g', 'h', 'i', 'j' -join '-'
 
-# Join array with separator
+# Join array without separator
 -join ('k', 'l', 'm', 'n', 'o')
 
 # Using .Net string.Join
@@ -157,9 +157,9 @@ three
 four4five5six6seven7
 ```
 
-In the first part the string is split based on the comma. The result is an array with 5 items.  
-In the second part the string is split based on the hyphen with a different method.  
-In the third part the string is split based on a part of a word.  
+In the first part the string is split based on the comma. The result is an array with 5 items.
+In the second part the string is split based on the hyphen with a different method.
+In the third part the string is split based on a part of a word.
 In the fourth part the string is split based on a try/catch block, but the amount of items returned is limited to 3.
 
 # Formatting Strings
@@ -187,7 +187,7 @@ J.Doe@awesomecorp.com
 
 # Strings in Objects
 
-With PowerShell we can do a lot of things with custom objects and we may want to use the values within.  
+With PowerShell we can do a lot of things with custom objects and we may want to use the values within.
 Using these values is something that in some cases need to be done in a certain way.
 
 ```powershell
@@ -232,7 +232,7 @@ Hello,  John Doe
 
 As you can see the first two examples work pretty well. We can retrieve the values using the properties of the object.
 
-In the third example we see we can't just add the properties to a string. We need to use the PowerShell notation to do this. 
+In the third example we see we can't just add the properties to a string. We need to use the PowerShell notation to do this.
 
 In the fourth example we use the PowerShell notation to add the properties to a string.
 
@@ -245,7 +245,7 @@ You can either use the `.Replace()` method or the `-replace` operator.
 
 ```powershell
 # Setup the query
-$query = "SELECT * FROM [_SCHEMANAME_].[_TABLENAME_] WHERE `id` = _ID_";
+$query = "SELECT * FROM [_SCHEMANAME_].[_TABLENAME_] WHERE id = _ID_";
 
 # Replace the templated values using the .Replace() method
 $query = $query.Replace("_SCHEMANAME_", "dbo");

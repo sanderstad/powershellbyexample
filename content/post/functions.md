@@ -7,7 +7,7 @@ categories:
 weight: 120
 ---
 
-Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.  
+Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.
 Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.
 
 To create a function we use the `function` keyword:
@@ -38,7 +38,7 @@ function writeMessage {
         [string]$Message
     )
 
-    Write-Host "Message: $message"
+    Write-Host "Message: $Message"
 }
 
 writeMessage "Hello World!"
@@ -56,7 +56,7 @@ Notice that we can pass parameters with and without specifying the parameter.
 
 ## Adding advanced functionality
 
-To make a function more advanced we can add `[CmdletBinding()]` to the function.  
+To make a function more advanced we can add `[CmdletBinding()]` to the function.
 This enabled you to support for:
 
 * Confirming for impact
@@ -95,7 +95,7 @@ Line |
      | Cannot bind argument to parameter 'Message' because it is an empty string.
 ```
 
-Notice that the function also includes the `process` keyword. 
+Notice that the function also includes the `process` keyword.
 
 ## Begin, process and End
 

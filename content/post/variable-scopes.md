@@ -7,13 +7,13 @@ categories:
 weight: 130
 ---
 
-When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.  
-For example, when you create a variable in a function, it is only available in the function.  
+When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.
+For example, when you create a variable in a function, it is only available in the function.
 When you create a variable in a script, it is available in the script and all functions in the script.
 
-There is a way to these items available outside it's current scope.
+There is a way to make these items available outside it's current scope.
 
-## Local 
+## Local
 
 The local scope is relative to whatever context the code runs in at the time.
 
@@ -31,7 +31,7 @@ Result:
 bla
 ```
 
-## Global 
+## Global
 
 Items in the global scope are available everywhere.
 
@@ -66,10 +66,10 @@ Variable One: bla bla
 Variable Two: boo
 ```
 
-As you can see the global variable we defined a global variable called *varOne* and we changed the value of *varOne* in the function.
+As you can see we defined a global variable called *varOne* and we changed the value of *varOne* in the function.
 We did not have access to variable *varTwo* because the scope of the variable was set to local in the function.
 
-## Private 
+## Private
 
 Items that are defined as private are not available outside the scope where they are defined.
 
@@ -106,12 +106,12 @@ Result
 ```
 var1 = 'This is a variable'
 Inside function, var1 = This is a variable
-Inside function with private, var1 = 
+Inside function with private, var1 =
 ```
 
 As you can see the function *test2* did not have access to the variable *var1* because it was defined as private.
 
-## Script 
+## Script
 
 A script scope is automatically created every time a PowerShell script runs.
 
@@ -133,7 +133,7 @@ Result:
 
 ```
 Var 1: Script Scoped
-Var 2: 
+Var 2:
 ```
 
 As you can see the script is not able to access the variables `$Var2` but is able to access the variable `$VarOne`.

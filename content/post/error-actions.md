@@ -210,11 +210,11 @@ $items | ForEach-Object {
 $error[0]
 ```
 
-THe result should be that the script returns nothing at all.
+The result should be that the script returns nothing at all.
 
 ### Inquire
 
-With `Inquire` PowerShellhelps when an error occurred due to cmdlet. It will give the option to the user with choices and prompt for appropriate action.
+With `Inquire` PowerShell helps when an error occurred due to cmdlet. It will give the option to the user with choices and prompt for appropriate action.
 
 ```powershell
 Clear-Host
