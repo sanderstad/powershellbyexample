@@ -31,7 +31,7 @@ This parameter takes in a string and replaces the placeholders with the values f
 </span></span><span style=display:flex><span>$date <span style=color:#f92672>-f</span> <span style=color:#e6db74>&#34;yyyyMMdd&#34;</span>
 </span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Monday, March 14, 2022 4:47:03 PM
 03/14/2022 16:47:03
-</code></pre><h2 id=adding-and-subtracting>Adding and subtracting</h2><p>It is possible to add and subtract dates in powershell. The functions may seem confusing but you can add using positive numbers and subtract using negative numbers.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$today = Get-Date
+</code></pre><h2 id=adding-and-subtracting>Adding and subtracting</h2><p>It is possible to add and subtract dates in PowerShell. The functions may seem confusing but you can add using positive numbers and subtract using negative numbers.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>$today = Get-Date
 </span></span><span style=display:flex><span>$yesterday = $today.AddDays(-1)
 </span></span><span style=display:flex><span>$tomorrow = $today.AddDays(1)
 </span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Today: </span><span style=color:#ae81ff>`t`t</span><span style=color:#e6db74>$today&#34;</span>
