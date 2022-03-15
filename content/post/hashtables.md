@@ -9,7 +9,7 @@ weight: 110
 
 In the arrays example we saw how to create arrays. In this example we will see how to create hashtables.
 
-A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare is to a key/value store database structure.
+A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare it to a key/value store database structure.
 
 To declare a hastable we use the `@{}` syntax:
 
@@ -74,7 +74,7 @@ The example above also directly used the key to get the value in the hashtable.
 
 ## Loop through a hashtable
 
-Accessing a hashtable in a loop is similar to the example you saw before.  
+Accessing a hashtable in a loop is similar to the example you saw before.
 There are several ways we can loop through a hashtable.
 
 ```powershell
@@ -106,7 +106,7 @@ The script also uses the `Sort-Object` command to sort the keys.
 
 ## Hastable with different properties
 
-Within a hashtable you are not bound to the key/value pair.  
+Within a hashtable you are not bound to the key/value pair.
 You can create a hashtable with different properties.
 
 ```powershell
@@ -175,20 +175,17 @@ Result:
 ```
 Name                           Value
 ----                           -----
-Name                           Value
-----                           -----
 Name                           John
 Address                        123 Main Street
 Name                           Sam
 Address                        321 South Street
-
-Address                        456 North Street
 Name                           Mary
-Address                        789 West Street
+Address                        456 North Street
 Name                           Bob
+Address                        789 West Street
 ```
 
-What happens here is that the first and last item keys are ordered differently. In the first two rows the `Name` and `Address` keys are displayed and for the next two rows the `Address` and `Name` keys are displayed.  
+What happens here is that the first and last item keys are ordered differently. In the first two rows the `Name` and `Address` keys are displayed and for the next two rows the `Address` and `Name` keys are displayed.
 That is because it is possible to set the order in which the items need to be iterated through. Once the `ordered` keyword is used the items will be displayed in that order.
 
 Another thing we can do is sort the hashtables by key:
@@ -199,7 +196,7 @@ $addresses = @()
 $addresses += @{Name = "John"; Address = "123 Main Street" }
 $addresses += @{
   Name = "Sam"
-  Address = "321 South Street" 
+  Address = "321 South Street"
 }
 $addresses += @{Name = "Mary"; Address = "456 North Street" }
 $addresses += @{Name = "Bob"; Address = "789 West Street" }

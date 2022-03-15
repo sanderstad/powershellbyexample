@@ -7,7 +7,7 @@ categories:
 weight: 80
 ---
 
-Switch statements are a way to execute different code based on different conditions.
+`Switch` statements are a way to execute different code based on different conditions.
 This approach can be more efficient than using multiple if/elseif statements
 
 ```powershell

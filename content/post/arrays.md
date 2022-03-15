@@ -7,12 +7,12 @@ categories:
 weight: 90
 ---
 
-An array is a data structure that is designed to store a collection of items.  
+An array is a data structure that is designed to store a collection of items.
 The items can be the same type or different types.
 
 ## Creating arrays
 
-Define an array using the @()
+Define an array using the `@()`
 
 ```powershell
 $values = @("One", "Two", "Three", "Four", "Five")
@@ -54,7 +54,7 @@ Nine
 Define an array with a specific type
 
 ```powershell
-[int[]] $values = 6, 7, 8, 9, 10
+[int[]]$values = 6, 7, 8, 9, 10
 $values
 ```
 
@@ -92,13 +92,13 @@ $values = @("One", "Two", "Three")
 $values
 
 # Counting the items in the array using the Count property
-Write-Host "Items in array $($values.Count)" 
+Write-Host "Items in array $($values.Count)"
 
 # Add a value to the array using the + operator
 $values += "Four"
 $values
 
-Write-Host "Items in array $($values.Count)" 
+Write-Host "Items in array $($values.Count)"
 
 # Change a value in the array using the index
 $values[0] = "Five"
@@ -125,7 +125,7 @@ Four
 
 ## Accessing arrays
 
-To access the items in the array, use the index.  
+To access the items in the array, use the index.
 The index starts at 0.
 
 ```powershell
@@ -143,7 +143,7 @@ Item at index 2: 3
 
 ## Looping though arrays
 
-The same index method as the example before can be used with loops. 
+The same index method as the example before can be used with loops.
 
 ```powershell
 $nameArray = @("Erik", "Penny", "Randy", "Sandy", "Toby", "Uma", "Vicky", "Will", "Xavier", "Yvette", "Zach")
