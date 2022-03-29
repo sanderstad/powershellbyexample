@@ -30,7 +30,7 @@ $number.GetType()   # Get the type of the variable.
 As soon as the variable is assigned a value, it is considered to be of that data type. This means that it cannot be changed without converting it to a different type.
 
 ```powershell
-$number = 1337
+[int]$number = 1337
 $number = "One Thousand, Three Hundred and Thirty-Seven"  #This will give an error
 ```
 
