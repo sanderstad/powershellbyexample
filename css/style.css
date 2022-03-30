@@ -10,6 +10,19 @@ h1 a {
     text-decoration: none;
 }
 
+a {
+    color: #0f7afc;
+}
+
+a:hover {
+    color: #cf0000;
+}
+
+
+/*a:visited {
+    color: #0f7afc;
+}*/
+
 
 /* header and footer areas */
 
