@@ -11,7 +11,7 @@ h1 a {
 }
 
 a {
-    color: #0f7afc;
+    color: #024391;
 }
 
 a:hover {
@@ -20,7 +20,7 @@ a:hover {
 
 
 /*a:visited {
-    color: #0f7afc;
+    color: #024391;
 }*/
 
 
@@ -50,6 +50,14 @@ footer {
 
 .title {
     font-size: 1.1em;
+}
+
+.title a {
+    color: #000000;
+}
+
+.title a:hover {
+    color: #024391;
 }
 
 footer a {
