@@ -27,7 +27,7 @@ Harley
 Jack
 Jake
 Luna
-Mittens
+mittens
 Muffin
 Noodle
 Peanut
