@@ -20,7 +20,7 @@ $json = (New-Object System.Net.WebClient).DownloadString($url)
 
 $data = $json | ConvertFrom-Json
 
-$data
+$data.colors
 ```
 
 The result should look like this:
