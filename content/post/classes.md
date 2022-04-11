@@ -4,7 +4,7 @@ author: Sander Stad
 date: '2022-04-11'
 categories:
   - Example
-weight: 210
+weight: 230
 ---
 
 Since PowerShell 5 you are able to create your own classes in PowerShell.
