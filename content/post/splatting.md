@@ -31,7 +31,7 @@ $params = @{
     Depth = 2
     Recurse = $true
 }
-Get-ChildItem -Path $env:TEMP -Include "*.txt" -Depth 2 -Recurse
+Get-ChildItem @params
 ```
 
 As you can see this is a lot more readable and easier to understand.
