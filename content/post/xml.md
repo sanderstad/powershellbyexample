@@ -1,5 +1,5 @@
 ---
-title: Handling XML
+title: XML
 author: Sander Stad
 date: '2023-12-12'
 categories:
