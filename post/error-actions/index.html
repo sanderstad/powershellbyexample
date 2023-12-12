@@ -1,10 +1,12 @@
-<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Error Actions | PowerShell By Example</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script type=text/javascript>sdkInstance="appInsightsSDK",window[sdkInstance]="appInsights";var sdkInstance,aiName=window[sdkInstance],aisdk=window[aiName]||function(n){function t(t){e[t]=function(){var n=arguments;e.queue.push(function(){e[t].apply(e,n)})}}e={config:n},e.initialize=!0;var e,o=document,i=window,s,a,r;setTimeout(function(){var e=o.createElement("script");e.src=n.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",o.getElementsByTagName("script")[0].parentNode.appendChild(e)});try{e.cookie=o.cookie}catch(e){}e.queue=[],e.version=2;for(s=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];s.length;)t("track"+s.pop());return t("startTrackPage"),t("stopTrackPage"),a="Track"+s[0],(t("start"+a),t("stop"+a),t("setAuthenticatedUserContext"),t("clearAuthenticatedUserContext"),t("flush"),!(!0===n.disableExceptionTracking||n.extensionConfig&&n.extensionConfig.ApplicationInsightsAnalytics&&!0===n.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking))&&(t("_"+(s="onerror")),r=i[s],i[s]=function(t,n,o,i,a){var c=r&&r(t,n,o,i,a);return!0!==c&&e["_"+s]({message:t,url:n,lineNumber:o,columnNumber:i,error:a}),c},n.autoExceptionInstrumented=!0),e}({instrumentationKey:"182786de-33f9-4d34-abc9-68ce85a717a0"});window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({})</script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Error Actions</span></h1></div><main><p>In normal circumstances, because we want PowerShell to work even though sometimes we have errors.
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Error Actions | PowerShell By Example</title>
+<link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><title>PowerShell By Example</title>
+<meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script type=text/javascript>sdkInstance="appInsightsSDK",window[sdkInstance]="appInsights";var sdkInstance,aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}t={config:e},t.initialize=!0;var t,s,i,a,o=document,r=window;setTimeout(function(){var t=o.createElement("script");t.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",o.getElementsByTagName("script")[0].parentNode.appendChild(t)});try{t.cookie=o.cookie}catch{}t.queue=[],t.version=2;for(s=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];s.length;)n("track"+s.pop());return n("startTrackPage"),n("stopTrackPage"),i="Track"+s[0],(n("start"+i),n("stop"+i),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking))&&(n("_"+(s="onerror")),a=r[s],r[s]=function(e,n,o,i,r){var c=a&&a(e,n,o,i,r);return!0!==c&&t["_"+s]({message:e,url:n,lineNumber:o,columnNumber:i,error:r}),c},e.autoExceptionInstrumented=!0),t}({instrumentationKey:"182786de-33f9-4d34-abc9-68ce85a717a0"});window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({})</script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Error Actions</span></h1></div><main><p>In normal circumstances, because we want PowerShell to work even though sometimes we have errors.
 That is the reason why PowerShell errors in general are what we call non-terminating errors.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Clear-Host
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -44,7 +46,7 @@ At line:2 char:5
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -63,7 +65,7 @@ At line:2 char:5
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -96,7 +98,7 @@ Line |
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -105,7 +107,7 @@ Line |
 </span></span><span style=display:flex><span>    Get-Item -Path $_ -ErrorAction SilentlyContinue
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>$error[0]
+</span></span><span style=display:flex><span>$error[<span style=color:#ae81ff>0</span>]
 </span></span></code></pre></div><p>No error should be displayed, but the error is still saved in the <code>$Error</code> variable.</p><p>Result:</p><pre tabindex=0><code>Get-Item:
 Line |
    2 |      Get-Item -Path $_ -ErrorAction SilentlyContinue
@@ -116,7 +118,7 @@ Line |
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
@@ -125,13 +127,13 @@ Line |
 </span></span><span style=display:flex><span>    Get-Item -Path $_ -ErrorAction Ignore
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
-</span></span><span style=display:flex><span>$error[0]
+</span></span><span style=display:flex><span>$error[<span style=color:#ae81ff>0</span>]
 </span></span></code></pre></div><p>The result should be that the script returns nothing at all.</p><h3 id=inquire>Inquire</h3><p>With <code>Inquire</code> PowerShell helps when an error occurred due to cmdlet. It will give the option to the user with choices and prompt for appropriate action.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-powershell data-lang=powershell><span style=display:flex><span>Clear-Host
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span>$items = @()
 </span></span><span style=display:flex><span>
 </span></span><span style=display:flex><span><span style=color:#75715e># Generate more items</span>
-</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = 0; $i <span style=color:#f92672>-le</span> 3; $i++) {
+</span></span><span style=display:flex><span>$items += <span style=color:#66d9ef>for</span> ($i = <span style=color:#ae81ff>0</span>; $i <span style=color:#f92672>-le</span> <span style=color:#ae81ff>3</span>; $i++) {
 </span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$($env:TEMP)<span style=color:#e6db74>\</span>$(Get-Process -Id $pid)<span style=color:#e6db74>-</span>$($i)<span style=color:#e6db74>.txt&#34;</span>
 </span></span><span style=display:flex><span>}
 </span></span><span style=display:flex><span>
