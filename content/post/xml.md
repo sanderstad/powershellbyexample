@@ -4,7 +4,7 @@ author: Sander Stad
 date: '2023-12-12'
 categories:
   - Example
-weight: 200
+weight: 240
 ---
 
 XML, or eXtensible Markup Language, is a versatile data format widely used for storing and exchanging structured information. In the realm of PowerShell, XML becomes a potent ally, offering a robust mechanism for handling and manipulating data in a hierarchical and human-readable way. In this article, we'll explore the integration of XML with PowerShell, unraveling the simplicity and efficacy it brings to scriptwriters.
