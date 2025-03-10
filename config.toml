@@ -3,3 +3,13 @@ languageCode = 'en-us'
 title = 'PowerShell By Example'
 theme = 'hugo-xmin'
 googleAnalytics = "G-WRS58SRCQM"
+
+
+[services]
+  [services.googleAnalytics]
+    id = 'G-WRS58SRCQM'
+
+[privacy]
+  [privacy.googleAnalytics]
+    disable = false
+    respectDoNotTrack = false

@@ -7,9 +7,11 @@
 
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
-    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" /> 
+    <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
 
-{{ partial "head_custom.html" . }}
+    {{ template "_internal/google_analytics.html" . }}
+
+    {{ partial "head_custom.html" . }}
 
 </head>
 
