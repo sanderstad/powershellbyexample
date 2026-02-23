@@ -375,7 +375,16 @@ At line:2 char:5
 &lt;pre tabindex="0"&gt;&lt;code&gt;This is just a test
 This is just another test
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example you see that the command &lt;code&gt;Add-Content&lt;/code&gt; automatically creates the file if it doesn&amp;rsquo;t exist.
-It also adds the value to another line.&lt;/p&gt;</description></item><item><title>Time and Date</title><link>https://powershellbyexample.dev/post/time-and-date/</link><pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/time-and-date/</guid><description>&lt;p&gt;In many operations within PowerShell we need time and date information.
+It also adds the value to another line.&lt;/p&gt;</description></item><item><title>Encoding and Decoding</title><link>https://powershellbyexample.dev/post/encoding/</link><pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/encoding/</guid><description>&lt;p&gt;Encoding converts data from one representation to another so it can be safely stored, transmitted, or processed. Decoding reverses that process. PowerShell has built-in support for several common encoding schemes.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="base64"&gt;Base64&lt;/h1&gt;
+&lt;p&gt;Base64 encodes binary data as printable ASCII text. It is widely used for embedding files in text formats, sending data in HTTP headers, and PowerShell&amp;rsquo;s own &lt;code&gt;-EncodedCommand&lt;/code&gt; parameter.&lt;/p&gt;
+&lt;h2 id="encoding-a-string"&gt;Encoding a String&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$text = &lt;span style="color:#e6db74"&gt;&amp;#34;Hello, World!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$bytes = [&lt;span style="color:#66d9ef"&gt;System.Text.Encoding&lt;/span&gt;]::UTF8.GetBytes($text)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$encoded = [&lt;span style="color:#66d9ef"&gt;System.Convert&lt;/span&gt;]::ToBase64String($bytes)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$encoded
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Time and Date</title><link>https://powershellbyexample.dev/post/time-and-date/</link><pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/time-and-date/</guid><description>&lt;p&gt;In many operations within PowerShell we need time and date information.
 When date and time values are being returned that is done with the &lt;code&gt;[datetime]&lt;/code&gt; data type.
 The format that&amp;rsquo;s being returned depends on the cultural settings of the computer.&lt;/p&gt;
 &lt;h2 id="general"&gt;General&lt;/h2&gt;
