@@ -444,4 +444,20 @@ yellow hue primary @{rgba=System.Object[]; hex=#FF0}
 green hue secondary @{rgba=System.Object[]; hex=#0F0}
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see the data is transformed into a custom object. Any nested data deeper than one level is also transformed into a custom object and saved in the parent property. For example the &lt;code&gt;code&lt;/code&gt; property is transformed into a custom object inside the parent custom object.&lt;/p&gt;</description></item><item><title>XML</title><link>https://powershellbyexample.dev/post/xml/</link><pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/xml/</guid><description>&lt;p&gt;XML, or eXtensible Markup Language, is a versatile data format widely used for storing and exchanging structured information. In the realm of PowerShell, XML becomes a potent ally, offering a robust mechanism for handling and manipulating data in a hierarchical and human-readable way. In this article, we&amp;rsquo;ll explore the integration of XML with PowerShell, unraveling the simplicity and efficacy it brings to scriptwriters.&lt;/p&gt;
 &lt;h2 id="creating-xml-with-powershell"&gt;Creating XML with PowerShell&lt;/h2&gt;
-&lt;p&gt;PowerShell provides seamless ways to generate XML content, both manually and programmatically.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;PowerShell provides seamless ways to generate XML content, both manually and programmatically.&lt;/p&gt;</description></item><item><title>Threading</title><link>https://powershellbyexample.dev/post/threading/</link><pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/threading/</guid><description>&lt;p&gt;Threading allows you to run multiple pieces of work at the same time, making scripts faster when tasks are independent of each other. PowerShell offers several ways to achieve this, from simple background jobs to low-level runspaces.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="background-jobs"&gt;Background Jobs&lt;/h1&gt;
+&lt;p&gt;The simplest way to run code in the background is &lt;code&gt;Start-Job&lt;/code&gt;. Each job runs in a separate PowerShell process.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$job = Start-Job -ScriptBlock {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Start-Sleep -Seconds &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Job completed&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Do other work here while the job runs...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Waiting for job...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Block until the job finishes and retrieve output&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Wait-Job -Job $job
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Receive-Job -Job $job
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Remove-Job -Job $job
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item></channel></rss>

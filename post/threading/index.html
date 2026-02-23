@@ -1,0 +1,161 @@
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Threading | PowerShell By Example</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css><script async src="https://www.googletagmanager.com/gtag/js?id=G-WRS58SRCQM"></script><script>var dnt,doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-WRS58SRCQM")}</script><title>PowerShell By Example</title><meta name=description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta name=keywords content="powershell,progamming,tutorial"><link rel=alternate type=application/rss+xml href=https://powershellbyexample.dev/index.xml title=powershellbyexample.dev><link rel=icon type=image/png sizes=32x32 href=https://powershellbyexample.dev/icons/favicon-32x32.png><meta name=twitter:image:src content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta name=twitter:site content="@sqlstad"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Learning PowerShell By Example"><meta name=twitter:description content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><meta property="og:image" content="https://raw.githubusercontent.com/sanderstad/powershellbyexample/main/static/twittercard.png"><meta property="og:image:alt" content="PowerShell by Example"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="600"><meta property="og:site_name" content="PowerShell By Example"><meta property="og:type" content="object"><meta property="og:title" content="Learning PowerShell By Example"><meta property="og:url" content="https://powershellbyexample.dev"><meta property="og:description" content="PowerShell by Example is a hands-on introduction to PowerShell using annotated example programs."><script type=text/javascript>sdkInstance="appInsightsSDK",window[sdkInstance]="appInsights";var sdkInstance,aiName=window[sdkInstance],aisdk=window[aiName]||function(e){function n(e){t[e]=function(){var n=arguments;t.queue.push(function(){t[e].apply(t,n)})}}t={config:e},t.initialize=!0;var t,s,i,a,o=document,r=window;setTimeout(function(){var t=o.createElement("script");t.src=e.url||"https://az416426.vo.msecnd.net/scripts/b/ai.2.min.js",o.getElementsByTagName("script")[0].parentNode.appendChild(t)});try{t.cookie=o.cookie}catch{}t.queue=[],t.version=2;for(s=["Event","PageView","Exception","Trace","DependencyData","Metric","PageViewPerformance"];s.length;)n("track"+s.pop());return n("startTrackPage"),n("stopTrackPage"),i="Track"+s[0],(n("start"+i),n("stop"+i),n("setAuthenticatedUserContext"),n("clearAuthenticatedUserContext"),n("flush"),!(!0===e.disableExceptionTracking||e.extensionConfig&&e.extensionConfig.ApplicationInsightsAnalytics&&!0===e.extensionConfig.ApplicationInsightsAnalytics.disableExceptionTracking))&&(n("_"+(s="onerror")),a=r[s],r[s]=function(e,n,o,i,r){var c=a&&a(e,n,o,i,r);return!0!==c&&t["_"+s]({message:e,url:n,lineNumber:o,columnNumber:i,error:r}),c},e.autoExceptionInstrumented=!0),t}({instrumentationKey:"182786de-33f9-4d34-abc9-68ce85a717a0"});window[aiName]=aisdk,aisdk.queue&&0===aisdk.queue.length&&aisdk.trackPageView({})</script></head><body><nav><ul class=menu></ul><hr></nav><div class=article-meta><h1><span class=title><a href=https://powershellbyexample.dev/>PowerShell By Example</a>: Threading</span></h1></div><main><p>Threading allows you to run multiple pieces of work at the same time, making scripts faster when tasks are independent of each other. PowerShell offers several ways to achieve this, from simple background jobs to low-level runspaces.</p><hr><h1 id=background-jobs>Background Jobs</h1><p>The simplest way to run code in the background is <code>Start-Job</code>. Each job runs in a separate PowerShell process.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$job = Start-Job -ScriptBlock {
+</span></span><span style=display:flex><span>    Start-Sleep -Seconds <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Job completed&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Do other work here while the job runs...</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Waiting for job...&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Block until the job finishes and retrieve output</span>
+</span></span><span style=display:flex><span>Wait-Job -Job $job
+</span></span><span style=display:flex><span>Receive-Job -Job $job
+</span></span><span style=display:flex><span>Remove-Job -Job $job
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Waiting for job...
+Job completed
+</code></pre><h2 id=multiple-jobs>Multiple Jobs</h2><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$jobs = <span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.5</span> | ForEach-Object {
+</span></span><span style=display:flex><span>    $number = $_
+</span></span><span style=display:flex><span>    Start-Job -ScriptBlock {
+</span></span><span style=display:flex><span>        Start-Sleep -Seconds (Get-Random -Minimum <span style=color:#ae81ff>1</span> -Maximum <span style=color:#ae81ff>3</span>)
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Job </span>$using<span style=color:#e6db74>:number done&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Wait for all jobs to finish</span>
+</span></span><span style=display:flex><span>$jobs | Wait-Job | Receive-Job
+</span></span><span style=display:flex><span>$jobs | Remove-Job
+</span></span></code></pre></div><p>Result (order may vary):</p><pre tabindex=0><code>Job 3 done
+Job 1 done
+Job 5 done
+Job 2 done
+Job 4 done
+</code></pre><blockquote><p>Note: <code>Start-Job</code> spawns a new process for each job, which has significant overhead. Use Thread Jobs or Runspaces for better performance.</p></blockquote><h2 id=language-mode-error>Language Mode Error</h2><p>If you see this error:</p><pre tabindex=0><code>Start-Job: Cannot start job. The language mode for this session is incompatible with the system-wide language mode.
+</code></pre><p>Your system enforces <strong>Constrained Language Mode (CLM)</strong> via AppLocker or Windows Defender Application Control (WDAC). Because <code>Start-Job</code> launches a new PowerShell process, that child process inherits the system-wide CLM policy and refuses to accept script blocks from a FullLanguage session.</p><p>You can check the current language mode with:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$ExecutionContext.SessionState.LanguageMode
+</span></span></code></pre></div><p><strong>Workarounds:</strong></p><p>The most practical alternative is <code>Start-ThreadJob</code> or <code>ForEach-Object -Parallel</code>, which run on threads inside the <em>same</em> process and are not subject to this restriction:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Use Start-ThreadJob instead</span>
+</span></span><span style=display:flex><span>$job = Start-ThreadJob -ScriptBlock {
+</span></span><span style=display:flex><span>    Start-Sleep -Seconds <span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Job completed&#34;</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Wait-Job -Job $job
+</span></span><span style=display:flex><span>Receive-Job -Job $job
+</span></span><span style=display:flex><span>Remove-Job -Job $job
+</span></span></code></pre></div><p>If you must use <code>Start-Job</code> in a CLM environment or on PowerShell 5.1, save the script to a <code>.ps1</code> file that is trusted under your AppLocker/WDAC policy and pass the file path with <code>-FilePath</code> instead of a script block:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># myjob.ps1 must be in a path allowed by AppLocker/WDAC</span>
+</span></span><span style=display:flex><span>Start-Job -FilePath <span style=color:#e6db74>&#34;C:\Scripts\myjob.ps1&#34;</span>
+</span></span></code></pre></div><hr><h1 id=thread-jobs>Thread Jobs</h1><p><code>Start-ThreadJob</code> (available in the <code>ThreadJob</code> module, included with PowerShell 7) runs jobs as threads instead of processes - much faster to start and with less memory overhead.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#75715e># Install if not already available (PowerShell 5.1)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Install-Module -Name ThreadJob</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$jobs = <span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.5</span> | ForEach-Object {
+</span></span><span style=display:flex><span>    $number = $_
+</span></span><span style=display:flex><span>    Start-ThreadJob -ScriptBlock {
+</span></span><span style=display:flex><span>        Start-Sleep -Milliseconds (Get-Random -Minimum <span style=color:#ae81ff>100</span> -Maximum <span style=color:#ae81ff>500</span>)
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Thread job </span>$using<span style=color:#e6db74>:number done&#34;</span>
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$jobs | Wait-Job | Receive-Job
+</span></span><span style=display:flex><span>$jobs | Remove-Job
+</span></span></code></pre></div><p>Result (order may vary):</p><pre tabindex=0><code>Thread job 2 done
+Thread job 4 done
+Thread job 1 done
+Thread job 5 done
+Thread job 3 done
+</code></pre><hr><h1 id=foreach-object--parallel-powershell-7>ForEach-Object -Parallel (PowerShell 7+)</h1><p>PowerShell 7 introduced the <code>-Parallel</code> parameter on <code>ForEach-Object</code>, which is the most concise way to parallelise a pipeline.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span><span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.5</span> | ForEach-Object -Parallel {
+</span></span><span style=display:flex><span>    Start-Sleep -Milliseconds (Get-Random -Minimum <span style=color:#ae81ff>100</span> -Maximum <span style=color:#ae81ff>500</span>)
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Item </span>$_<span style=color:#e6db74> processed&#34;</span>
+</span></span><span style=display:flex><span>} -ThrottleLimit <span style=color:#ae81ff>3</span>
+</span></span></code></pre></div><p>Result (order may vary):</p><pre tabindex=0><code>Item 2 processed
+Item 1 processed
+Item 3 processed
+Item 5 processed
+Item 4 processed
+</code></pre><p>The <code>-ThrottleLimit</code> controls how many threads run simultaneously (default is 5).</p><h2 id=passing-variables-into-parallel-blocks>Passing Variables into Parallel Blocks</h2><p>Variables from the outer scope are not automatically available inside <code>-Parallel</code>. Use the <code>$using:</code> scope modifier.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$prefix = <span style=color:#e6db74>&#34;Result&#34;</span>
+</span></span><span style=display:flex><span>$multiplier = <span style=color:#ae81ff>10</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.5</span> | ForEach-Object -Parallel {
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;</span>$using<span style=color:#e6db74>:prefix: </span>$($_ * $using<span style=color:#960050;background-color:#1e0010>:</span>multiplier)<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>} -ThrottleLimit <span style=color:#ae81ff>5</span>
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Result: 10
+Result: 20
+Result: 30
+Result: 40
+Result: 50
+</code></pre><hr><h1 id=runspaces>Runspaces</h1><p>Runspaces are the lowest-level threading primitive in PowerShell. They are faster than jobs and give you the most control, but require more setup.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$runspace = [<span style=color:#66d9ef>System.Management.Automation.Runspaces.RunspaceFactory</span>]::CreateRunspace()
+</span></span><span style=display:flex><span>$runspace.Open()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ps = [<span style=color:#66d9ef>System.Management.Automation.PowerShell</span>]::Create()
+</span></span><span style=display:flex><span>$ps.Runspace = $runspace
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ps.AddScript({
+</span></span><span style=display:flex><span>    Start-Sleep -Milliseconds <span style=color:#ae81ff>500</span>
+</span></span><span style=display:flex><span>    <span style=color:#e6db74>&#34;Runspace completed&#34;</span>
+</span></span><span style=display:flex><span>}) | Out-Null
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Start asynchronously</span>
+</span></span><span style=display:flex><span>$asyncResult = $ps.BeginInvoke()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Do other work here...</span>
+</span></span><span style=display:flex><span>Write-Host <span style=color:#e6db74>&#34;Runspace is running asynchronously...&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Wait and collect output</span>
+</span></span><span style=display:flex><span>$output = $ps.EndInvoke($asyncResult)
+</span></span><span style=display:flex><span>$output
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$ps.Dispose()
+</span></span><span style=display:flex><span>$runspace.Close()
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Runspace is running asynchronously...
+Runspace completed
+</code></pre><hr><h1 id=runspace-pools-advanced>Runspace Pools (Advanced)</h1><p>A <code>RunspacePool</code> limits the number of concurrent threads, preventing resource exhaustion when processing large collections.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$maxThreads = <span style=color:#ae81ff>4</span>
+</span></span><span style=display:flex><span>$pool = [<span style=color:#66d9ef>System.Management.Automation.Runspaces.RunspaceFactory</span>]::CreateRunspacePool(<span style=color:#ae81ff>1</span>, $maxThreads)
+</span></span><span style=display:flex><span>$pool.Open()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$jobs = [<span style=color:#66d9ef>System.Collections.Generic.List[hashtable]</span>]::new()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>foreach</span> ($i <span style=color:#66d9ef>in</span> <span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.10</span>) {
+</span></span><span style=display:flex><span>    $ps = [<span style=color:#66d9ef>System.Management.Automation.PowerShell</span>]::Create()
+</span></span><span style=display:flex><span>    $ps.RunspacePool = $pool
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    $ps.AddScript({
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>param</span>($number)
+</span></span><span style=display:flex><span>        Start-Sleep -Milliseconds (Get-Random -Minimum <span style=color:#ae81ff>100</span> -Maximum <span style=color:#ae81ff>400</span>)
+</span></span><span style=display:flex><span>        <span style=color:#e6db74>&#34;Item </span>$number<span style=color:#e6db74> processed on thread </span>$(
+</span></span><span style=display:flex><span>            [<span style=color:#66d9ef>System.Threading.Thread</span>]::CurrentThread.ManagedThreadId
+</span></span><span style=display:flex><span>        )<span style=color:#e6db74>&#34;</span>
+</span></span><span style=display:flex><span>    }).AddArgument($i) | Out-Null
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    $jobs.Add(@{
+</span></span><span style=display:flex><span>        PowerShell  = $ps
+</span></span><span style=display:flex><span>        AsyncResult = $ps.BeginInvoke()
+</span></span><span style=display:flex><span>    })
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Collect all results</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>foreach</span> ($job <span style=color:#66d9ef>in</span> $jobs) {
+</span></span><span style=display:flex><span>    $job.PowerShell.EndInvoke($job.AsyncResult)
+</span></span><span style=display:flex><span>    $job.PowerShell.Dispose()
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$pool.Close()
+</span></span><span style=display:flex><span>$pool.Dispose()
+</span></span></code></pre></div><p>Result (order may vary; notice thread IDs are reused):</p><pre tabindex=0><code>Item 2 processed on thread 12
+Item 1 processed on thread 9
+Item 4 processed on thread 11
+Item 3 processed on thread 10
+Item 6 processed on thread 12
+Item 5 processed on thread 9
+...
+</code></pre><hr><h1 id=thread-safe-collections>Thread-Safe Collections</h1><p>When multiple threads write to a shared collection, race conditions can occur. Use thread-safe types from <code>System.Collections.Concurrent</code>.</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-powershell data-lang=powershell><span style=display:flex><span>$results = [<span style=color:#66d9ef>System.Collections.Concurrent.ConcurrentBag[string]</span>]::new()
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#ae81ff>1</span>.<span style=color:#ae81ff>.10</span> | ForEach-Object -Parallel {
+</span></span><span style=display:flex><span>    $bag = $using<span style=color:#960050;background-color:#1e0010>:</span>results
+</span></span><span style=display:flex><span>    $bag.Add(<span style=color:#e6db74>&#34;Item </span>$_<span style=color:#e6db74> finished&#34;</span>)
+</span></span><span style=display:flex><span>} -ThrottleLimit <span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$results | Sort-Object
+</span></span></code></pre></div><p>Result:</p><pre tabindex=0><code>Item 1 finished
+Item 2 finished
+Item 3 finished
+...
+Item 10 finished
+</code></pre><blockquote><p>Avoid writing to a plain <code>[System.Collections.Generic.List[T]]</code> or <code>@()</code> array from parallel threads - use <code>ConcurrentBag</code>, <code>ConcurrentQueue</code>, or <code>ConcurrentDictionary</code> instead.</p></blockquote><hr><h1 id=summary>Summary</h1><table><thead><tr><th>Approach</th><th>Isolation</th><th>Speed</th><th>Best for</th></tr></thead><tbody><tr><td><code>Start-Job</code></td><td>Process</td><td>Slow</td><td>Isolation, compatibility with PS 5.1</td></tr><tr><td><code>Start-ThreadJob</code></td><td>Thread</td><td>Fast</td><td>General parallel tasks</td></tr><tr><td><code>ForEach-Object -Parallel</code></td><td>Thread</td><td>Fast</td><td>Simple pipeline parallelism (PS 7+)</td></tr><tr><td>Runspace</td><td>Thread</td><td>Fastest</td><td>Fine-grained control, high volume</td></tr><tr><td>RunspacePool</td><td>Thread</td><td>Fastest</td><td>Throttled high-volume processing</td></tr></tbody></table></main><footer><p><a href=https://powershellbyexample.dev/>Home</a></p><p>by <a href=https://sqlstad.nl target=_blank>Sander Stad</a> |
+<a href=https://github.com/sanderstad/powershellbyexample target=_blank>source</a> |
+<a href=https://github.com/sanderstad/powershellbyexample/blob/main/LICENSE target=_blank>license</a></p></footer></body></html>
