@@ -4,7 +4,7 @@ author: Sander Stad
 date: '2026-02-23'
 categories:
   - Example
-weight: 155
+weight: 165
 ---
 
 PowerShell is **case-insensitive by default**. This means that commands, variable names, string comparisons, and operators all work regardless of upper or lower case. However, there are many situations where case sensitivity matters, and PowerShell provides explicit ways to control it.
