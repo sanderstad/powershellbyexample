@@ -76,7 +76,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Collatio igitur ista te
 
 ## Import-CSV
 
-When you have a specific CSV file, you can use the `Import-Csv` command to interpret the data as CSV.
+When you have a specific CSV file, you can use the `Import-Csv` command to convert the data into Objects.
 
 ```powershell
 Import-Csv -Path (Join-Path -Path $env:temp -ChildPath "samplefile2.txt")
