@@ -1,64 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PowerShell by Example on PowerShell By Example</title><link>https://powershellbyexample.dev/</link><description>Recent content in PowerShell by Example on PowerShell By Example</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 12 Dec 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://powershellbyexample.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://powershellbyexample.dev/post/hello-world/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/hello-world/</guid><description>&lt;p>As with every first program we write, we will print the classic &amp;ldquo;hello world&amp;rdquo; message. Here’s the full source code.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Write-Host &lt;span style="color:#e6db74">&amp;#39;Hello, World!&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#39;Hello, World!&amp;#39;&lt;/span> | Write-Host
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Hello, World!
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>PowerShell by Example on PowerShell By Example</title><link>https://powershellbyexample.dev/</link><description>Recent content in PowerShell by Example on PowerShell By Example</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 23 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://powershellbyexample.dev/index.xml" rel="self" type="application/rss+xml"/><item><title>Hello World</title><link>https://powershellbyexample.dev/post/hello-world/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/hello-world/</guid><description>&lt;p&gt;As with every first program we write, we will print the classic &amp;ldquo;hello world&amp;rdquo; message. Here’s the full source code.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Host &lt;span style="color:#e6db74"&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt; | Write-Host
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Hello, World!
 Hello, World!
-&lt;/code>&lt;/pre>&lt;p>There is another method to print the output or the strings to screen and that is is &lt;code>Write-Output&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Write-Output &lt;span style="color:#e6db74">&amp;#39;Hello, World!&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#39;Hello, World!&amp;#39;&lt;/span> | Write-Output
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will print the exact same thing as the previous snippet.&lt;/p>
-&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Hello, World!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;There is another method to print the output or the strings to screen and that is is &lt;code&gt;Write-Output&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Write-Output &lt;span style="color:#e6db74"&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#39;Hello, World!&amp;#39;&lt;/span&gt; | Write-Output
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This will print the exact same thing as the previous snippet.&lt;/p&gt;
+&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Hello, World!
 Hello, World!
-&lt;/code>&lt;/pre>&lt;p>It all becomes different when the two commands are used to store the output.&lt;/p></description></item><item><title>Variables</title><link>https://powershellbyexample.dev/post/variables/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/variables/</guid><description>&lt;p>In PowerShell we can store all types of values in PowerShell variables. It&amp;rsquo;s possible to store the results of commands, and store elements that are used in commands and expressions, such as names, paths, settings, and values.&lt;/p>
-&lt;p>PowerShell variables, unlike other languages are not case-sensitive, and can include spaces and special characters. Variable names with special characters and spaces are difficult to use and should be avoided. For more information, see &lt;a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2#variable-names-that-include-special-characters">Variable names that include special characters&lt;/a>.&lt;/p></description></item><item><title>Read-Only Variables</title><link>https://powershellbyexample.dev/post/read-only-variables/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/read-only-variables/</guid><description>&lt;p>PowerShell supports constants and read-only variables.&lt;br>
-Read-only variables are variables that cannot be changed, in a regular way.&lt;/p>
-&lt;p>You create a read-only variable with the &lt;code>New-Variable&lt;/code> command with the parameter &lt;code>-Option ReadOnly&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>New-Variable -Name myVar -Value &lt;span style="color:#ae81ff">1337&lt;/span> -Option ReadOnly
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$myVar
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Let&amp;rsquo;s try and change it&lt;/p>
-&lt;pre tabindex="0">&lt;code>$myVar = 31337
-&lt;/code>&lt;/pre>&lt;div class="error">
- &lt;pre tabindex="0">&lt;code>Cannot overwrite variable myVar because it is read-only or constant.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It all becomes different when the two commands are used to store the output.&lt;/p&gt;</description></item><item><title>Variables</title><link>https://powershellbyexample.dev/post/variables/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/variables/</guid><description>&lt;p&gt;In PowerShell we can store all types of values in PowerShell variables. It&amp;rsquo;s possible to store the results of commands, and store elements that are used in commands and expressions, such as names, paths, settings, and values.&lt;/p&gt;
+&lt;p&gt;PowerShell variables, unlike other languages are not case-sensitive, and can include spaces and special characters. Variable names with special characters and spaces are difficult to use and should be avoided. For more information, see &lt;a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_variables?view=powershell-7.2#variable-names-that-include-special-characters"&gt;Variable names that include special characters&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Read-Only Variables</title><link>https://powershellbyexample.dev/post/read-only-variables/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/read-only-variables/</guid><description>&lt;p&gt;PowerShell supports constants and read-only variables.&lt;br&gt;
+Read-only variables are variables that cannot be changed, in a regular way.&lt;/p&gt;
+&lt;p&gt;You create a read-only variable with the &lt;code&gt;New-Variable&lt;/code&gt; command with the parameter &lt;code&gt;-Option ReadOnly&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;New-Variable -Name myVar -Value &lt;span style="color:#ae81ff"&gt;1337&lt;/span&gt; -Option ReadOnly
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$myVar
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Let&amp;rsquo;s try and change it&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$myVar = 31337
+&lt;/code&gt;&lt;/pre&gt;&lt;div class="error"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;Cannot overwrite variable myVar because it is read-only or constant.
 At line:1 char:1
 + $myVar = 31337
 + ~~~~~~~~~~~~~~
  + CategoryInfo : WriteError: (myVar:String) [], SessionStateUnauthorizedAccessException
  + FullyQualifiedErrorId : VariableNotWritable
-&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;p>To change the variable we need to use the &lt;code>-Force&lt;/code> parameter:&lt;/p></description></item><item><title>Constants</title><link>https://powershellbyexample.dev/post/constants/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/constants/</guid><description>&lt;p>PowerShell supports constants and read-only variables.&lt;br>
-Constants are variables that cannot be changed whatever you try.&lt;/p>
-&lt;p>You create a constant variable with the &lt;code>New-Variable&lt;/code> command with the parameter &lt;code>-Option Constant&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>New-Variable -Name myConst -Value &lt;span style="color:#e6db74">&amp;#34;This CANNOT be changed&amp;#34;&lt;/span> -Option Constant
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$myConst
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can&amp;rsquo;t change te value even with the &lt;code>-Force&lt;/code> parameter&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>New-Variable -Name myConst -Value &lt;span style="color:#e6db74">&amp;#34;I&amp;#39;m going to change it&amp;#34;&lt;/span> -Option Constant -Force
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;div class="error">
- &lt;pre tabindex="0">&lt;code>New-Variable : Cannot overwrite variable myConst because it is read-only or constant.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;To change the variable we need to use the &lt;code&gt;-Force&lt;/code&gt; parameter:&lt;/p&gt;</description></item><item><title>Constants</title><link>https://powershellbyexample.dev/post/constants/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/constants/</guid><description>&lt;p&gt;PowerShell supports constants and read-only variables.&lt;br&gt;
+Constants are variables that cannot be changed whatever you try.&lt;/p&gt;
+&lt;p&gt;You create a constant variable with the &lt;code&gt;New-Variable&lt;/code&gt; command with the parameter &lt;code&gt;-Option Constant&lt;/code&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;New-Variable -Name myConst -Value &lt;span style="color:#e6db74"&gt;&amp;#34;This CANNOT be changed&amp;#34;&lt;/span&gt; -Option Constant
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$myConst
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We can&amp;rsquo;t change te value even with the &lt;code&gt;-Force&lt;/code&gt; parameter&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;New-Variable -Name myConst -Value &lt;span style="color:#e6db74"&gt;&amp;#34;I&amp;#39;m going to change it&amp;#34;&lt;/span&gt; -Option Constant -Force
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="error"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;New-Variable : Cannot overwrite variable myConst because it is read-only or constant.
 At line:1 char:1
 + New-Variable -Name myConst -Value &amp;#34;I&amp;#39;m going to change it&amp;#34; -Option Co ...
 + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  + CategoryInfo : WriteError: (myConst:String) [New-Variable], SessionStateUnauthorizedAccessException
  + FullyQualifiedErrorId : VariableNotWritable,Microsoft.PowerShell.Commands.NewVariableCommand
-&lt;/code>&lt;/pre>
-&lt;/div></description></item><item><title>For</title><link>https://powershellbyexample.dev/post/for/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/for/</guid><description>&lt;p>Classic for loop&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> ($i = &lt;span style="color:#ae81ff">1&lt;/span>; $i &lt;span style="color:#f92672">-le&lt;/span> &lt;span style="color:#ae81ff">5&lt;/span>; $i++){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host $i
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;</description></item><item><title>For</title><link>https://powershellbyexample.dev/post/for/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/for/</guid><description>&lt;p&gt;Classic for loop&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; ($i = &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;; $i &lt;span style="color:#f92672"&gt;-le&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;; $i++){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host $i
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1
 2
 3
 4
 5
-&lt;/code>&lt;/pre>&lt;p>We can also use text in our for loop conditions&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">for&lt;/span> ($i = &lt;span style="color:#e6db74">&amp;#39;&amp;#39;&lt;/span> ; $i.length &lt;span style="color:#f92672">-le&lt;/span> &lt;span style="color:#ae81ff">20&lt;/span>; $i += &lt;span style="color:#e6db74">&amp;#39;=&amp;#39;&lt;/span>){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host $i
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>=
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;We can also use text in our for loop conditions&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; ($i = &lt;span style="color:#e6db74"&gt;&amp;#39;&amp;#39;&lt;/span&gt; ; $i.length &lt;span style="color:#f92672"&gt;-le&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;20&lt;/span&gt;; $i += &lt;span style="color:#e6db74"&gt;&amp;#39;=&amp;#39;&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host $i
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;=
 ==
 ===
 ====
@@ -73,99 +73,99 @@ At line:1 char:1
 ...
 ...
 ====================
-&lt;/code>&lt;/pre></description></item><item><title>Foreach</title><link>https://powershellbyexample.dev/post/foreach/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/foreach/</guid><description>&lt;p>Foreach is a loop that iterates over a collection.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$list = @(&lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;b&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;c&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;d&amp;#39;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">foreach&lt;/span>($item &lt;span style="color:#66d9ef">in&lt;/span> $list){
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host $item
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>a
+&lt;/code&gt;&lt;/pre&gt;</description></item><item><title>Foreach</title><link>https://powershellbyexample.dev/post/foreach/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/foreach/</guid><description>&lt;p&gt;Foreach is a loop that iterates over a collection.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$list = @(&lt;span style="color:#e6db74"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;foreach&lt;/span&gt;($item &lt;span style="color:#66d9ef"&gt;in&lt;/span&gt; $list){
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host $item
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;a
 b
 c
 d
-&lt;/code>&lt;/pre>&lt;p>The equivalent of the above is:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$list = @(&lt;span style="color:#e6db74">&amp;#39;a&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;b&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;c&amp;#39;&lt;/span>, &lt;span style="color:#e6db74">&amp;#39;d&amp;#39;&lt;/span>);
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$list | ForEach-Object { Write-Host $_ }
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>a
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The equivalent of the above is:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$list = @(&lt;span style="color:#e6db74"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$list | ForEach-Object { Write-Host $_ }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;a
 b
 c
 d
-&lt;/code>&lt;/pre>&lt;p>The &lt;code>ForEach-Object&lt;/code> command has more options than the basic &lt;code>foreach&lt;/code> loop. For more info about the &lt;code>ForEach-Object&lt;/code> command run the &lt;code>Get-Help&lt;/code> command.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Get-Help ForEach-Object
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>If/Else</title><link>https://powershellbyexample.dev/post/if-else/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/if-else/</guid><description>&lt;p>Using &lt;code>if&lt;/code> and &lt;code>else&lt;/code> statements in PowerShell is pretty straightforward.&lt;/p>
-&lt;p>You can have an &lt;code>if&lt;/code> statement without an &lt;code>else&lt;/code> statement.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$value = &lt;span style="color:#ae81ff">5&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> ($value &lt;span style="color:#f92672">-gt&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is greater than 1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>value is greater than 1
-&lt;/code>&lt;/pre>&lt;p>You can have an &lt;code>if&lt;/code> statement with a single &lt;code>else&lt;/code> statement, or an &lt;code>if&lt;/code> statement with an &lt;code>else if&lt;/code> statement.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$value = &lt;span style="color:#ae81ff">5&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> ($value &lt;span style="color:#f92672">-gt&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is greater than 10&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">else&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is &lt;/span>$value&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> ($value &lt;span style="color:#f92672">-gt&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is greater than 10&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($value &lt;span style="color:#f92672">-lt&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is less than 10&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">else&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;value is 10&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p></description></item><item><title>Switch</title><link>https://powershellbyexample.dev/post/switch/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/switch/</guid><description>&lt;p>&lt;code>Switch&lt;/code> statements are a way to execute different code based on different conditions.
-This approach can be more efficient than using multiple if/elseif statements&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$month = &lt;span style="color:#ae81ff">3&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">if&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">1&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;January&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">2&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;February&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;March&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">4&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;April&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">5&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;May&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">6&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;June&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">7&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;July&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">8&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;August&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">9&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;September&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;October&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">11&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;November&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">elseif&lt;/span> ($month &lt;span style="color:#f92672">-eq&lt;/span> &lt;span style="color:#ae81ff">12&lt;/span>) { Write-Host &lt;span style="color:#e6db74">&amp;#34;December&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">else&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;Invalid month&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Instead we can write the above as&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">switch&lt;/span> ($month) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">1&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;January&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">2&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;February&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">3&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;March&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">4&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;April&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">5&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;May&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">6&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;June&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">7&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;July&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">8&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;August&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">9&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;September&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">10&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;October&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">11&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;November&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">12&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;December&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#66d9ef">default&lt;/span> { Write-Host &lt;span style="color:#e6db74">&amp;#34;Invalid month&amp;#34;&lt;/span> }
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p></description></item><item><title>Arrays</title><link>https://powershellbyexample.dev/post/arrays/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/arrays/</guid><description>&lt;p>An array is a data structure that is designed to store a collection of items.
-The items can be the same type or different types.&lt;/p>
-&lt;h2 id="creating-arrays">Creating arrays&lt;/h2>
-&lt;p>Define an array using the &lt;code>@()&lt;/code>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$values = @(&lt;span style="color:#e6db74">&amp;#34;One&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Two&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Three&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Four&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Five&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$values
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$values.GetType()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>One
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The &lt;code&gt;ForEach-Object&lt;/code&gt; command has more options than the basic &lt;code&gt;foreach&lt;/code&gt; loop. For more info about the &lt;code&gt;ForEach-Object&lt;/code&gt; command run the &lt;code&gt;Get-Help&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Help ForEach-Object
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>If/Else</title><link>https://powershellbyexample.dev/post/if-else/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/if-else/</guid><description>&lt;p&gt;Using &lt;code&gt;if&lt;/code&gt; and &lt;code&gt;else&lt;/code&gt; statements in PowerShell is pretty straightforward.&lt;/p&gt;
+&lt;p&gt;You can have an &lt;code&gt;if&lt;/code&gt; statement without an &lt;code&gt;else&lt;/code&gt; statement.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$value = &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($value &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is greater than 1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;value is greater than 1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;You can have an &lt;code&gt;if&lt;/code&gt; statement with a single &lt;code&gt;else&lt;/code&gt; statement, or an &lt;code&gt;if&lt;/code&gt; statement with an &lt;code&gt;else if&lt;/code&gt; statement.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$value = &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($value &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is greater than 10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is &lt;/span&gt;$value&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($value &lt;span style="color:#f92672"&gt;-gt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is greater than 10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($value &lt;span style="color:#f92672"&gt;-lt&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is less than 10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;value is 10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Switch</title><link>https://powershellbyexample.dev/post/switch/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/switch/</guid><description>&lt;p&gt;&lt;code&gt;Switch&lt;/code&gt; statements are a way to execute different code based on different conditions.
+This approach can be more efficient than using multiple if/elseif statements&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$month = &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;January&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;February&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;March&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;April&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;May&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;6&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;June&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;July&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;8&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;August&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;September&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;October&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;11&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;November&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;elseif&lt;/span&gt; ($month &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;12&lt;/span&gt;) { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;December&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;else&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Invalid month&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Instead we can write the above as&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;switch&lt;/span&gt; ($month) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;January&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;February&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;March&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;April&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;May&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;6&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;June&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;7&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;July&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;8&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;August&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;9&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;September&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;10&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;October&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;11&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;November&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;12&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;December&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;default&lt;/span&gt; { Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Invalid month&amp;#34;&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Arrays</title><link>https://powershellbyexample.dev/post/arrays/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/arrays/</guid><description>&lt;p&gt;An array is a data structure that is designed to store a collection of items.
+The items can be the same type or different types.&lt;/p&gt;
+&lt;h2 id="creating-arrays"&gt;Creating arrays&lt;/h2&gt;
+&lt;p&gt;Define an array using the &lt;code&gt;@()&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$values = @(&lt;span style="color:#e6db74"&gt;&amp;#34;One&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Two&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Three&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Four&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Five&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$values
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$values.GetType()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;One
 Two
 Three
 Four
@@ -174,27 +174,27 @@ Five
 IsPublic IsSerial Name BaseType
 -------- -------- ---- --------
 True True Object[] System.Array
-&lt;/code>&lt;/pre>&lt;p>Define an array by setting with comma separated values&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$values = &lt;span style="color:#e6db74">&amp;#34;Six&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Seven&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Eight&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;Nine&amp;#34;&lt;/span>, &lt;span style="color:#e6db74">&amp;#34;10&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$values
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Six
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Define an array by setting with comma separated values&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$values = &lt;span style="color:#e6db74"&gt;&amp;#34;Six&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Seven&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Eight&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;Nine&amp;#34;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#34;10&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$values
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Six
 Seven
 Eight
 Nine
 10
-&lt;/code>&lt;/pre>&lt;p>Define an array with a specific type&lt;/p></description></item><item><title>Multidimensional Arrays</title><link>https://powershellbyexample.dev/post/multidimensional-arrays/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/multidimensional-arrays/</guid><description>&lt;p>There are two types of multidimensional arrays, jagged and true multidimensional arrays.&lt;/p>
-&lt;h2 id="jagged-arrays">Jagged arrays&lt;/h2>
-&lt;p>Jagged arrays are the arrays you will probably use the most. These types of arrays are very cost effective because the dimensions can be different in size.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$array = @(&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>, (&lt;span style="color:#ae81ff">1&lt;/span>, &lt;span style="color:#ae81ff">2&lt;/span>, &lt;span style="color:#ae81ff">3&lt;/span>), &lt;span style="color:#ae81ff">3&lt;/span>, &lt;span style="color:#ae81ff">4&lt;/span>, (&lt;span style="color:#ae81ff">10&lt;/span>, &lt;span style="color:#ae81ff">11&lt;/span>, &lt;span style="color:#ae81ff">12&lt;/span>), &lt;span style="color:#ae81ff">5&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">0&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">1&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">2&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">2&lt;/span>][&lt;span style="color:#ae81ff">0&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">2&lt;/span>][&lt;span style="color:#ae81ff">1&lt;/span>]
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$array[&lt;span style="color:#ae81ff">5&lt;/span>]
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>1
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Define an array with a specific type&lt;/p&gt;</description></item><item><title>Multidimensional Arrays</title><link>https://powershellbyexample.dev/post/multidimensional-arrays/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/multidimensional-arrays/</guid><description>&lt;p&gt;There are two types of multidimensional arrays, jagged and true multidimensional arrays.&lt;/p&gt;
+&lt;h2 id="jagged-arrays"&gt;Jagged arrays&lt;/h2&gt;
+&lt;p&gt;Jagged arrays are the arrays you will probably use the most. These types of arrays are very cost effective because the dimensions can be different in size.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array = @(&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, (&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;), &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;4&lt;/span&gt;, (&lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;11&lt;/span&gt;, &lt;span style="color:#ae81ff"&gt;12&lt;/span&gt;), &lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;][&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;2&lt;/span&gt;][&lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$array[&lt;span style="color:#ae81ff"&gt;5&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;1
 2
 1
 2
@@ -204,61 +204,74 @@ Nine
 10
 11
 12
-&lt;/code>&lt;/pre>&lt;h2 id="true-multidimensional-arrays">True multidimensional arrays&lt;/h2>
-&lt;p>With true multidimensional arrays can be compared to a matrix. You define the size of the array/matrix when you create it.&lt;/p></description></item><item><title>Hashtables</title><link>https://powershellbyexample.dev/post/hashtables/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/hashtables/</guid><description>&lt;p>In the arrays example we saw how to create arrays. In this example we will see how to create hashtables.&lt;/p>
-&lt;p>A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare it to a key/value store database structure.&lt;/p>
-&lt;p>To declare a hastable we use the &lt;code>@{}&lt;/code> syntax:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$employees = @{}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This is different from the arrays where the &lt;code>@()&lt;/code> is used.&lt;/p></description></item><item><title>Functions</title><link>https://powershellbyexample.dev/post/functions/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/functions/</guid><description>&lt;p>Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.
-Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.&lt;/p>
-&lt;p>To create a function we use the &lt;code>function&lt;/code> keyword:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">function&lt;/span> writeHelloWorld() {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;Hello World!&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>writeHelloWorld
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Hello World!
-&lt;/code>&lt;/pre>&lt;p>Obviously this function is not very useful, but it is a good example how easy it is to create a function.&lt;/p></description></item><item><title>Scopes</title><link>https://powershellbyexample.dev/post/variable-scopes/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/variable-scopes/</guid><description>&lt;p>When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="true-multidimensional-arrays"&gt;True multidimensional arrays&lt;/h2&gt;
+&lt;p&gt;With true multidimensional arrays can be compared to a matrix. You define the size of the array/matrix when you create it.&lt;/p&gt;</description></item><item><title>Hashtables</title><link>https://powershellbyexample.dev/post/hashtables/</link><pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/hashtables/</guid><description>&lt;p&gt;In the arrays example we saw how to create arrays. In this example we will see how to create hashtables.&lt;/p&gt;
+&lt;p&gt;A hashtable is a data structure, similar like an array, but with a hashtable each value is stored with a key. You can compare it to a key/value store database structure.&lt;/p&gt;
+&lt;p&gt;To declare a hastable we use the &lt;code&gt;@{}&lt;/code&gt; syntax:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$employees = @{}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This is different from the arrays where the &lt;code&gt;@()&lt;/code&gt; is used.&lt;/p&gt;</description></item><item><title>Functions</title><link>https://powershellbyexample.dev/post/functions/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/functions/</guid><description>&lt;p&gt;Functions are not required in PowerShell, but when your code becomes repetitive you should consider using functions.
+Also when creating PowerShell modules you should really consider putting code into functions to make your code more readable.&lt;/p&gt;
+&lt;p&gt;To create a function we use the &lt;code&gt;function&lt;/code&gt; keyword:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;function&lt;/span&gt; writeHelloWorld() {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;writeHelloWorld
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Hello World!
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Obviously this function is not very useful, but it is a good example how easy it is to create a function.&lt;/p&gt;</description></item><item><title>Scopes</title><link>https://powershellbyexample.dev/post/variable-scopes/</link><pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/variable-scopes/</guid><description>&lt;p&gt;When you create a variable, alias or a function in PowerShell, it is only available in the current scope where it was created.
 For example, when you create a variable in a function, it is only available in the function.
-When you create a variable in a script, it is available in the script and all functions in the script.&lt;/p>
-&lt;p>There is a way to make these items available outside it&amp;rsquo;s current scope.&lt;/p></description></item><item><title>Strings</title><link>https://powershellbyexample.dev/post/strings/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/strings/</guid><description>&lt;h1 id="defining-strings">Defining strings&lt;/h1>
-&lt;p>There are various ways you define a string in PowerShell&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$var = &lt;span style="color:#e6db74">&amp;#34;Hello World!&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#e6db74">&amp;#34;Lorem ipsum dolor sit amet...&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$value1 = &lt;span style="color:#e6db74">&amp;#34;Ut enim ad minim veniam... &lt;/span>$var&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$value2 = &lt;span style="color:#e6db74">&amp;#39;Duis aute irure dolor in... $var&amp;#39;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>[&lt;span style="color:#66d9ef">string&lt;/span>]$value3 = &lt;span style="color:#e6db74">&amp;#34;Excepteur sint occaecat cupidatat non proident...&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$value1, $value2, $value3
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>write-host $value1, $value2, $value3
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>write-host $value1 $value2 $value3
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Lorem ipsum dolor sit amet...
+When you create a variable in a script, it is available in the script and all functions in the script.&lt;/p&gt;
+&lt;p&gt;There is a way to make these items available outside it&amp;rsquo;s current scope.&lt;/p&gt;</description></item><item><title>Strings</title><link>https://powershellbyexample.dev/post/strings/</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/strings/</guid><description>&lt;h1 id="defining-strings"&gt;Defining strings&lt;/h1&gt;
+&lt;p&gt;There are various ways you define a string in PowerShell&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$var = &lt;span style="color:#e6db74"&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;Lorem ipsum dolor sit amet...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$value1 = &lt;span style="color:#e6db74"&gt;&amp;#34;Ut enim ad minim veniam... &lt;/span&gt;$var&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$value2 = &lt;span style="color:#e6db74"&gt;&amp;#39;Duis aute irure dolor in... $var&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;[&lt;span style="color:#66d9ef"&gt;string&lt;/span&gt;]$value3 = &lt;span style="color:#e6db74"&gt;&amp;#34;Excepteur sint occaecat cupidatat non proident...&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$value1, $value2, $value3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;write-host $value1, $value2, $value3
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;write-host $value1 $value2 $value3
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Lorem ipsum dolor sit amet...
 Ut enim ad minim veniam... Hello World!
 Duis aute irure dolor in... $var
 Excepteur sint occaecat cupidatat non proident...
 Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepteur sint occaecat cupidatat non proident...
 Ut enim ad minim veniam... Hello World! Duis aute irure dolor in... $var Excepteur sint occaecat cupidatat non proident...
-&lt;/code>&lt;/pre>&lt;p>In the third line in the example above, the string is written to screen because we haven&amp;rsquo;t given PowerShell anything to do with it.&lt;/p></description></item><item><title>Error Actions</title><link>https://powershellbyexample.dev/post/error-actions/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/error-actions/</guid><description>&lt;p>In normal circumstances, because we want PowerShell to work even though sometimes we have errors.
-That is the reason why PowerShell errors in general are what we call non-terminating errors.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Clear-Host
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$items = @()
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Generate more items&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$items += &lt;span style="color:#66d9ef">for&lt;/span> ($i = &lt;span style="color:#ae81ff">0&lt;/span>; $i &lt;span style="color:#f92672">-le&lt;/span> &lt;span style="color:#ae81ff">3&lt;/span>; $i++) {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#e6db74">&amp;#34;&lt;/span>$($env:TEMP)&lt;span style="color:#e6db74">\&lt;/span>$(Get-Process -Id $pid)&lt;span style="color:#e6db74">-&lt;/span>$($i)&lt;span style="color:#e6db74">.txt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Let&amp;#39;s generate some errors&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$items | ForEach-Object {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Get-Item -Path $_
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;div class="error">
- &lt;pre tabindex="0">&lt;code>Get-Item : Cannot find path &amp;#39;C:\Users\Sander\AppData\Local\Temp\System.Diagnostics.Process (powershell)-0.txt&amp;#39; because it does not exist.
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In the third line in the example above, the string is written to screen because we haven&amp;rsquo;t given PowerShell anything to do with it.&lt;/p&gt;</description></item><item><title>Regular Expressions</title><link>https://powershellbyexample.dev/post/regex/</link><pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/regex/</guid><description>&lt;p&gt;Regular expressions (regex) are patterns used to match, search, and manipulate text. PowerShell has built-in support for regex through operators like &lt;code&gt;-match&lt;/code&gt;, &lt;code&gt;-replace&lt;/code&gt;, and &lt;code&gt;-split&lt;/code&gt;, as well as the .NET &lt;code&gt;[regex]&lt;/code&gt; class.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="basic-examples"&gt;Basic Examples&lt;/h1&gt;
+&lt;h2 id="testing-a-match"&gt;Testing a match&lt;/h2&gt;
+&lt;p&gt;The &lt;code&gt;-match&lt;/code&gt; operator returns &lt;code&gt;$true&lt;/code&gt; or &lt;code&gt;$false&lt;/code&gt; depending on whether the pattern is found in the string.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$email = &lt;span style="color:#e6db74"&gt;&amp;#34;user@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($email &lt;span style="color:#f92672"&gt;-match&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;@&amp;#34;&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Contains an @&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$result = &lt;span style="color:#e6db74"&gt;&amp;#34;PowerShell 7&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;-match&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;\d&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$result
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Error Actions</title><link>https://powershellbyexample.dev/post/error-actions/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/error-actions/</guid><description>&lt;p&gt;In normal circumstances, because we want PowerShell to work even though sometimes we have errors.
+That is the reason why PowerShell errors in general are what we call non-terminating errors.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Clear-Host
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$items = @()
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Generate more items&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$items += &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; ($i = &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;; $i &lt;span style="color:#f92672"&gt;-le&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;3&lt;/span&gt;; $i++) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;$($env:TEMP)&lt;span style="color:#e6db74"&gt;\&lt;/span&gt;$(Get-Process -Id $pid)&lt;span style="color:#e6db74"&gt;-&lt;/span&gt;$($i)&lt;span style="color:#e6db74"&gt;.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Let&amp;#39;s generate some errors&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$items | ForEach-Object {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Get-Item -Path $_
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;div class="error"&gt;
+ &lt;pre tabindex="0"&gt;&lt;code&gt;Get-Item : Cannot find path &amp;#39;C:\Users\Sander\AppData\Local\Temp\System.Diagnostics.Process (powershell)-0.txt&amp;#39; because it does not exist.
 At line:2 char:5
 + Get-Item -Path $_
 + ~~~~~~~~~~~~~~~~~
@@ -285,61 +298,96 @@ At line:2 char:5
 + ~~~~~~~~~~~~~~~~~
  + CategoryInfo : ObjectNotFound: (C:\Users\Sander...wershell)-3.txt:String) [Get-Item], ItemNotFoundException
  + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.GetItemCommand
-&lt;/code>&lt;/pre>
-&lt;/div>
-&lt;p>Although we got a lot of errors, PowerShell still executes the script&lt;/p></description></item><item><title>Error Handling</title><link>https://powershellbyexample.dev/post/error-handling/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/error-handling/</guid><description>&lt;p>The try/catch blocks in PowerShell are used to handle terminating error. With the try/catch block you also have a finally keyword that will be executed even when an error is found.&lt;/p>
-&lt;h2 id="general">General&lt;/h2>
-&lt;p>The example below is a standard way to do a try/catch block&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#66d9ef">try&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># This will generate an error&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#ae81ff">1&lt;/span>/&lt;span style="color:#ae81ff">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;This is executed after the error&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>} &lt;span style="color:#66d9ef">catch&lt;/span> {
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#75715e"># Catch all errors&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> Write-Host &lt;span style="color:#e6db74">&amp;#34;Oh oh! Error occurred.&lt;/span>&lt;span style="color:#ae81ff">`n&lt;/span>$_&lt;span style="color:#e6db74">&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>}
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p></description></item><item><title>Reading Files</title><link>https://powershellbyexample.dev/post/reading-files/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/reading-files/</guid><description>&lt;p>To demonstrate reading files we need sample files first.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Let&amp;#39;s download a sample file just for the example&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://gist.githubusercontent.com/sanderstad/7b9593f7f30abb9f17f9026c74ed9c68/raw/d4406c4cbbc427e15fc9d6d92f8bcf3c72a1e70a/samplefile1.txt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$filePath = Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74">&amp;#34;samplefile1.txt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Invoke-WebRequest -Uri $url -OutFile $filePath
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://gist.githubusercontent.com/sanderstad/f59996889fc3ec794d325ad2162648f8/raw/5353480009bd714f9764a093b52f0fabff1078fd/samplefile2.csv&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$filePath = Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74">&amp;#34;samplefile2.txt&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Invoke-WebRequest -Uri $url -OutFile $filePath
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="get-content">Get-Content&lt;/h2>
-&lt;p>The easiest way to read files in PowerShell is by using the the &lt;code>Get-Content&lt;/code> command.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Get the content&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Get-Content -Path (Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74">&amp;#34;samplefile1.txt&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p></description></item><item><title>Writing Files</title><link>https://powershellbyexample.dev/post/writing-files/</link><pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/writing-files/</guid><description>&lt;p>There are several methods to write data to files&lt;/p>
-&lt;h2 id="add-content">Add-Content&lt;/h2>
-&lt;p>To add content to a file run the following script:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Add-Content -Path (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74">&amp;#34;test1.txt&amp;#34;&lt;/span>) -Value &lt;span style="color:#e6db74">&amp;#34;This is just a test&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Add-Content -Path (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74">&amp;#34;test1.txt&amp;#34;&lt;/span>) -Value &lt;span style="color:#e6db74">&amp;#34;This is just another test&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Get-Content (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74">&amp;#34;test1.txt&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>This is just a test
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;Although we got a lot of errors, PowerShell still executes the script&lt;/p&gt;</description></item><item><title>Case Sensitivity</title><link>https://powershellbyexample.dev/post/case-sensitivity/</link><pubDate>Mon, 23 Feb 2026 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/case-sensitivity/</guid><description>&lt;p&gt;PowerShell is &lt;strong&gt;case-insensitive by default&lt;/strong&gt;. This means that commands, variable names, string comparisons, and operators all work regardless of upper or lower case. However, there are many situations where case sensitivity matters, and PowerShell provides explicit ways to control it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="comparison-operators"&gt;Comparison Operators&lt;/h1&gt;
+&lt;p&gt;All of PowerShell&amp;rsquo;s comparison operators come in three flavors:&lt;/p&gt;
+&lt;table&gt;
+ &lt;thead&gt;
+ &lt;tr&gt;
+ &lt;th&gt;Variant&lt;/th&gt;
+ &lt;th&gt;Prefix&lt;/th&gt;
+ &lt;th&gt;Behavior&lt;/th&gt;
+ &lt;/tr&gt;
+ &lt;/thead&gt;
+ &lt;tbody&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Default&lt;/td&gt;
+ &lt;td&gt;none&lt;/td&gt;
+ &lt;td&gt;Case-insensitive&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Case-insensitive&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;i&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Explicitly case-insensitive&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+ &lt;td&gt;Case-sensitive&lt;/td&gt;
+ &lt;td&gt;&lt;code&gt;c&lt;/code&gt;&lt;/td&gt;
+ &lt;td&gt;Explicitly case-sensitive&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id="equality--eq"&gt;Equality (&lt;code&gt;-eq&lt;/code&gt;)&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Default (case-insensitive)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;PowerShell&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;-eq&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;powershell&amp;#34;&lt;/span&gt; &lt;span style="color:#75715e"&gt;# True&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;PowerShell&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;-ieq&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;powershell&amp;#34;&lt;/span&gt; &lt;span style="color:#75715e"&gt;# True (explicit)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#e6db74"&gt;&amp;#34;PowerShell&amp;#34;&lt;/span&gt; &lt;span style="color:#f92672"&gt;-ceq&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;powershell&amp;#34;&lt;/span&gt; &lt;span style="color:#75715e"&gt;# False (case-sensitive)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Error Handling</title><link>https://powershellbyexample.dev/post/error-handling/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/error-handling/</guid><description>&lt;p&gt;The try/catch blocks in PowerShell are used to handle terminating error. With the try/catch block you also have a finally keyword that will be executed even when an error is found.&lt;/p&gt;
+&lt;h2 id="general"&gt;General&lt;/h2&gt;
+&lt;p&gt;The example below is a standard way to do a try/catch block&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;try&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# This will generate an error&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;/&lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;This is executed after the error&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;} &lt;span style="color:#66d9ef"&gt;catch&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;# Catch all errors&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; Write-Host &lt;span style="color:#e6db74"&gt;&amp;#34;Oh oh! Error occurred.&lt;/span&gt;&lt;span style="color:#ae81ff"&gt;`n&lt;/span&gt;$_&lt;span style="color:#e6db74"&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Reading Files</title><link>https://powershellbyexample.dev/post/reading-files/</link><pubDate>Wed, 09 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/reading-files/</guid><description>&lt;p&gt;To demonstrate reading files we need sample files first.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Let&amp;#39;s download a sample file just for the example&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$url = &lt;span style="color:#e6db74"&gt;&amp;#34;https://gist.githubusercontent.com/sanderstad/7b9593f7f30abb9f17f9026c74ed9c68/raw/d4406c4cbbc427e15fc9d6d92f8bcf3c72a1e70a/samplefile1.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$filePath = Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;samplefile1.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Invoke-WebRequest -Uri $url -OutFile $filePath
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$url = &lt;span style="color:#e6db74"&gt;&amp;#34;https://gist.githubusercontent.com/sanderstad/f59996889fc3ec794d325ad2162648f8/raw/5353480009bd714f9764a093b52f0fabff1078fd/samplefile2.csv&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$filePath = Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;samplefile2.txt&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Invoke-WebRequest -Uri $url -OutFile $filePath
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id="get-content"&gt;Get-Content&lt;/h2&gt;
+&lt;p&gt;The easiest way to read files in PowerShell is by using the the &lt;code&gt;Get-Content&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Get the content&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Content -Path (Join-Path -Path $env:temp -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;samplefile1.txt&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;</description></item><item><title>Writing Files</title><link>https://powershellbyexample.dev/post/writing-files/</link><pubDate>Thu, 10 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/writing-files/</guid><description>&lt;p&gt;There are several methods to write data to files&lt;/p&gt;
+&lt;h2 id="add-content"&gt;Add-Content&lt;/h2&gt;
+&lt;p&gt;To add content to a file run the following script:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Add-Content -Path (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;test1.txt&amp;#34;&lt;/span&gt;) -Value &lt;span style="color:#e6db74"&gt;&amp;#34;This is just a test&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Add-Content -Path (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;test1.txt&amp;#34;&lt;/span&gt;) -Value &lt;span style="color:#e6db74"&gt;&amp;#34;This is just another test&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Content (Join-Path -Path $env:TEMP -ChildPath &lt;span style="color:#e6db74"&gt;&amp;#34;test1.txt&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;This is just a test
 This is just another test
-&lt;/code>&lt;/pre>&lt;p>In this example you see that the command &lt;code>Add-Content&lt;/code> automatically creates the file if it doesn&amp;rsquo;t exist.
-It also adds the value to another line.&lt;/p></description></item><item><title>Time and Date</title><link>https://powershellbyexample.dev/post/time-and-date/</link><pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/time-and-date/</guid><description>&lt;p>In many operations within PowerShell we need time and date information.
-When date and time values are being returned that is done with the &lt;code>[datetime]&lt;/code> data type.
-The format that&amp;rsquo;s being returned depends on the cultural settings of the computer.&lt;/p>
-&lt;h2 id="general">General&lt;/h2>
-&lt;p>To get the current date and time, use the &lt;code> Get-Date&lt;/code> command.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>Get-Date
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Monday, March 14, 2022 4:40:48 PM
-&lt;/code>&lt;/pre>&lt;h2 id="date-and-time-parts">Date and time parts&lt;/h2>
-&lt;p>To get specific values from the command we can use the properties in the &lt;code>[datetime]&lt;/code> type.&lt;/p></description></item><item><title>Sorting</title><link>https://powershellbyexample.dev/post/sorting/</link><pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/sorting/</guid><description>&lt;p>Sorting values is important in any programming language. To do this in PowerShell you can use the &lt;code>Sort-Object&lt;/code> command. By default the sort is done in ascending order and case insensitive.&lt;/p>
-&lt;p>Here are some examples how to sort data in PowerShell.&lt;/p>
-&lt;h2 id="sort-by-value">Sort by value&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$names = @(&lt;span style="color:#e6db74">&amp;#34;Muffin&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Romeo&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Noodle&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Zoe&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Jack&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Luna&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Gracie&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;mittens&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Phoebe&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Peanut&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Harley&amp;#34;&lt;/span>,&lt;span style="color:#e6db74">&amp;#34;Jake&amp;#34;&lt;/span>)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$names | Sort-Object
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The result:&lt;/p>
-&lt;pre tabindex="0">&lt;code>Gracie
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;In this example you see that the command &lt;code&gt;Add-Content&lt;/code&gt; automatically creates the file if it doesn&amp;rsquo;t exist.
+It also adds the value to another line.&lt;/p&gt;</description></item><item><title>Time and Date</title><link>https://powershellbyexample.dev/post/time-and-date/</link><pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/time-and-date/</guid><description>&lt;p&gt;In many operations within PowerShell we need time and date information.
+When date and time values are being returned that is done with the &lt;code&gt;[datetime]&lt;/code&gt; data type.
+The format that&amp;rsquo;s being returned depends on the cultural settings of the computer.&lt;/p&gt;
+&lt;h2 id="general"&gt;General&lt;/h2&gt;
+&lt;p&gt;To get the current date and time, use the &lt;code&gt; Get-Date&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Get-Date
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Monday, March 14, 2022 4:40:48 PM
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="date-and-time-parts"&gt;Date and time parts&lt;/h2&gt;
+&lt;p&gt;To get specific values from the command we can use the properties in the &lt;code&gt;[datetime]&lt;/code&gt; type.&lt;/p&gt;</description></item><item><title>Sorting</title><link>https://powershellbyexample.dev/post/sorting/</link><pubDate>Tue, 05 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/sorting/</guid><description>&lt;p&gt;Sorting values is important in any programming language. To do this in PowerShell you can use the &lt;code&gt;Sort-Object&lt;/code&gt; command. By default the sort is done in ascending order and case insensitive.&lt;/p&gt;
+&lt;p&gt;Here are some examples how to sort data in PowerShell.&lt;/p&gt;
+&lt;h2 id="sort-by-value"&gt;Sort by value&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$names = @(&lt;span style="color:#e6db74"&gt;&amp;#34;Muffin&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Romeo&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Noodle&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Zoe&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Jack&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Luna&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Gracie&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;mittens&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Phoebe&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Peanut&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Harley&amp;#34;&lt;/span&gt;,&lt;span style="color:#e6db74"&gt;&amp;#34;Jake&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$names | Sort-Object
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;Gracie
 Harley
 Jack
 Jake
@@ -351,38 +399,38 @@ Peanut
 Phoebe
 Romeo
 Zoe
-&lt;/code>&lt;/pre>&lt;h2 id="sort-by-descending-order">Sort by descending order&lt;/h2>
-&lt;p>By default any data is sorted in ascending order. To sort in descending order you can use the &lt;code>-Descending&lt;/code> parameter.&lt;/p></description></item><item><title>Custom Objects</title><link>https://powershellbyexample.dev/post/custom-object/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/custom-object/</guid><description>&lt;p>Custom objects are a powerful feature of PowerShell and can be leveraged to make your function/commands even more suitable for advanced use cases.
-It is an easy way to create structured data without any fuzz. Importing and exporting data will also be muc easier.&lt;/p>
-&lt;p>To create a custom object we can to use the &lt;code>New-Object&lt;/code> command or use the [PSCustomObject] type.&lt;/p>
-&lt;h1 id="creating-a-custom-object">Creating a custom object&lt;/h1>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e"># Old style of creating an object&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$object1 = New-Object PSObject
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Add-Member -InputObject $object1 -MemberType NoteProperty -Name prop1 -Value &lt;span style="color:#e6db74">&amp;#34;value1&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>Add-Member -InputObject $object1 -MemberType NoteProperty -Name prop2 -Value &lt;span style="color:#e6db74">&amp;#34;value2&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$object1
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$object1.GetType()
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The result should look something like this:&lt;/p></description></item><item><title>Splatting</title><link>https://powershellbyexample.dev/post/splatting/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/splatting/</guid><description>&lt;p>In some situations we have so many parameters that we cannot fit it on a single line or have to use the &amp;ldquo;`&amp;rdquo; sign to separate lines.&lt;br>
-I&amp;rsquo;m not a fan of having very long lines or the backticks because it makes the code hard to read.&lt;br>
-Instead we can use variable splatting to pass multiple parameters to a function.&lt;/p>
-&lt;p>A splatted variable is a collection of values that is passed to a function as a single parameter.&lt;br>
-This type of variable is in essence a hashtable.&lt;/p></description></item><item><title>Classes</title><link>https://powershellbyexample.dev/post/classes/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/classes/</guid><description>&lt;p>Since PowerShell 5 you are able to create your own classes in PowerShell.&lt;/p>
-&lt;p>Although classes in other programming languages are a big advantage and sometimes even required, they are not required in PowerShell.&lt;/p>
-&lt;p>In some cases you may want to use classes in PowerShell to create objects that can be used in PowerShell. One of those examples is when you use DSC (Desired State Configuration).
-Most of the time you will not need to use classes in PowerShell, and you will be fine using custom objects in your commands instead.&lt;/p></description></item><item><title>JSON</title><link>https://powershellbyexample.dev/post/json/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/json/</guid><description>&lt;p>If there is one thing that you want to do with PowerShell is handling JSON data.&lt;br>
-Because PowerShell is so flexible with custom objects, reading and writing JSON data becomes very easy and powerful.&lt;/p>
-&lt;h1 id="reading-json-data">Reading JSON data&lt;/h1>
-&lt;p>The parsing of JSON data is done using the &lt;code>ConvertFrom-Json&lt;/code> command.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-powershell" data-lang="powershell">&lt;span style="display:flex;">&lt;span>$url = &lt;span style="color:#e6db74">&amp;#34;https://gist.githubusercontent.com/sanderstad/1c47c1add7476945857bff4d8dc2be59/raw/d12f30e4aaf9d2ee18e4539b394a12e63dea0c9c/SampleJSON1.json&amp;#34;&lt;/span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$json = (New-Object System.Net.WebClient).DownloadString($url)
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$data = $json | ConvertFrom-Json
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
-&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>$data.colors
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The result should look like this:&lt;/p>
-&lt;pre tabindex="0">&lt;code>color category type code
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="sort-by-descending-order"&gt;Sort by descending order&lt;/h2&gt;
+&lt;p&gt;By default any data is sorted in ascending order. To sort in descending order you can use the &lt;code&gt;-Descending&lt;/code&gt; parameter.&lt;/p&gt;</description></item><item><title>Custom Objects</title><link>https://powershellbyexample.dev/post/custom-object/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/custom-object/</guid><description>&lt;p&gt;Custom objects are a powerful feature of PowerShell and can be leveraged to make your function/commands even more suitable for advanced use cases.
+It is an easy way to create structured data without any fuzz. Importing and exporting data will also be muc easier.&lt;/p&gt;
+&lt;p&gt;To create a custom object we can to use the &lt;code&gt;New-Object&lt;/code&gt; command or use the [PSCustomObject] type.&lt;/p&gt;
+&lt;h1 id="creating-a-custom-object"&gt;Creating a custom object&lt;/h1&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Old style of creating an object&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$object1 = New-Object PSObject
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Add-Member -InputObject $object1 -MemberType NoteProperty -Name prop1 -Value &lt;span style="color:#e6db74"&gt;&amp;#34;value1&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;Add-Member -InputObject $object1 -MemberType NoteProperty -Name prop2 -Value &lt;span style="color:#e6db74"&gt;&amp;#34;value2&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$object1
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$object1.GetType()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result should look something like this:&lt;/p&gt;</description></item><item><title>Splatting</title><link>https://powershellbyexample.dev/post/splatting/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/splatting/</guid><description>&lt;p&gt;In some situations we have so many parameters that we cannot fit it on a single line or have to use the &amp;ldquo;`&amp;rdquo; sign to separate lines.&lt;br&gt;
+I&amp;rsquo;m not a fan of having very long lines or the backticks because it makes the code hard to read.&lt;br&gt;
+Instead we can use variable splatting to pass multiple parameters to a function.&lt;/p&gt;
+&lt;p&gt;A splatted variable is a collection of values that is passed to a function as a single parameter.&lt;br&gt;
+This type of variable is in essence a hashtable.&lt;/p&gt;</description></item><item><title>Classes</title><link>https://powershellbyexample.dev/post/classes/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/classes/</guid><description>&lt;p&gt;Since PowerShell 5 you are able to create your own classes in PowerShell.&lt;/p&gt;
+&lt;p&gt;Although classes in other programming languages are a big advantage and sometimes even required, they are not required in PowerShell.&lt;/p&gt;
+&lt;p&gt;In some cases you may want to use classes in PowerShell to create objects that can be used in PowerShell. One of those examples is when you use DSC (Desired State Configuration).
+Most of the time you will not need to use classes in PowerShell, and you will be fine using custom objects in your commands instead.&lt;/p&gt;</description></item><item><title>JSON</title><link>https://powershellbyexample.dev/post/json/</link><pubDate>Mon, 11 Apr 2022 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/json/</guid><description>&lt;p&gt;If there is one thing that you want to do with PowerShell is handling JSON data.&lt;br&gt;
+Because PowerShell is so flexible with custom objects, reading and writing JSON data becomes very easy and powerful.&lt;/p&gt;
+&lt;h1 id="reading-json-data"&gt;Reading JSON data&lt;/h1&gt;
+&lt;p&gt;The parsing of JSON data is done using the &lt;code&gt;ConvertFrom-Json&lt;/code&gt; command.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"&gt;&lt;code class="language-powershell" data-lang="powershell"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$url = &lt;span style="color:#e6db74"&gt;&amp;#34;https://gist.githubusercontent.com/sanderstad/1c47c1add7476945857bff4d8dc2be59/raw/d12f30e4aaf9d2ee18e4539b394a12e63dea0c9c/SampleJSON1.json&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$json = (New-Object System.Net.WebClient).DownloadString($url)
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$data = $json | ConvertFrom-Json
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;$data.colors
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result should look like this:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;color category type code
 ----- -------- ---- ----
 black hue primary @{rgba=System.Object[]; hex=#000}
 white value @{rgba=System.Object[]; hex=#FFF}
@@ -390,6 +438,6 @@ red hue primary @{rgba=System.Object[]; hex=#FF0}
 blue hue primary @{rgba=System.Object[]; hex=#00F}
 yellow hue primary @{rgba=System.Object[]; hex=#FF0}
 green hue secondary @{rgba=System.Object[]; hex=#0F0}
-&lt;/code>&lt;/pre>&lt;p>As you can see the data is transformed into a custom object. Any nested data deeper than one level is also transformed into a custom object and saved in the parent property. For example the &lt;code>code&lt;/code> property is transformed into a custom object inside the parent custom object.&lt;/p></description></item><item><title>XML</title><link>https://powershellbyexample.dev/post/xml/</link><pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/xml/</guid><description>&lt;p>XML, or eXtensible Markup Language, is a versatile data format widely used for storing and exchanging structured information. In the realm of PowerShell, XML becomes a potent ally, offering a robust mechanism for handling and manipulating data in a hierarchical and human-readable way. In this article, we&amp;rsquo;ll explore the integration of XML with PowerShell, unraveling the simplicity and efficacy it brings to scriptwriters.&lt;/p>
-&lt;h2 id="creating-xml-with-powershell">Creating XML with PowerShell&lt;/h2>
-&lt;p>PowerShell provides seamless ways to generate XML content, both manually and programmatically.&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As you can see the data is transformed into a custom object. Any nested data deeper than one level is also transformed into a custom object and saved in the parent property. For example the &lt;code&gt;code&lt;/code&gt; property is transformed into a custom object inside the parent custom object.&lt;/p&gt;</description></item><item><title>XML</title><link>https://powershellbyexample.dev/post/xml/</link><pubDate>Tue, 12 Dec 2023 00:00:00 +0000</pubDate><guid>https://powershellbyexample.dev/post/xml/</guid><description>&lt;p&gt;XML, or eXtensible Markup Language, is a versatile data format widely used for storing and exchanging structured information. In the realm of PowerShell, XML becomes a potent ally, offering a robust mechanism for handling and manipulating data in a hierarchical and human-readable way. In this article, we&amp;rsquo;ll explore the integration of XML with PowerShell, unraveling the simplicity and efficacy it brings to scriptwriters.&lt;/p&gt;
+&lt;h2 id="creating-xml-with-powershell"&gt;Creating XML with PowerShell&lt;/h2&gt;
+&lt;p&gt;PowerShell provides seamless ways to generate XML content, both manually and programmatically.&lt;/p&gt;</description></item></channel></rss>
